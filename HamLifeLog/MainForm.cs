@@ -98,10 +98,11 @@ namespace HamLifeLog
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            if (CallTextBox.Text != _data.HisCallSign) _data.HisCallSign = HisSignalRSTTextBox.Text;
+            if (CallTextBox.Text != _data.HisCallSign) _data.HisCallSign = CallTextBox.Text;
             if (MySignalRSTTextBox.Text != _data.MySignalRST) _data.MySignalRST = MySignalRSTTextBox.Text;
             if (HisSignalRSTTextBox.Text != _data.HisSignalRST) _data.HisSignalRST = HisSignalRSTTextBox.Text;
             if (CommentTextBox.Text != _data.Comment) _data.Comment = CommentTextBox.Text;
+            if (ShowModeTextBox.Text != _data.Mode) _data.Mode = ShowModeTextBox.Text;
             if (DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss") != _data.Date) _data.RawDate = DateTime.UtcNow;
         }
 

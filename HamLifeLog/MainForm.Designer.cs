@@ -30,15 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.doubleBufferTableLayoutPanel1 = new HamLifeLog.DoubleBufferTableLayoutPanel();
-            this.LogSpaceTitleLabel = new System.Windows.Forms.Label();
+            this.MySignalRSTTextBox = new System.Windows.Forms.TextBox();
+            this.logDataBindingClassBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CommentTextBox = new System.Windows.Forms.TextBox();
             this.ShowDateLabel = new System.Windows.Forms.Label();
+            this.LogSpaceTitleLabel = new System.Windows.Forms.Label();
             this.CallTextBox = new System.Windows.Forms.TextBox();
             this.HisSignalRSTTextBox = new System.Windows.Forms.TextBox();
-            this.CommentTextBox = new System.Windows.Forms.TextBox();
-            this.MySignalRSTTextBox = new System.Windows.Forms.TextBox();
             this.ShowModeTextBox = new System.Windows.Forms.TextBox();
             this.ShowBandsLabel = new System.Windows.Forms.Label();
-            this.logDataBindingClassBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.doubleBufferTableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logDataBindingClassBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -70,15 +71,29 @@
             this.doubleBufferTableLayoutPanel1.Size = new System.Drawing.Size(799, 144);
             this.doubleBufferTableLayoutPanel1.TabIndex = 0;
             // 
-            // LogSpaceTitleLabel
+            // MySignalRSTTextBox
             // 
-            this.LogSpaceTitleLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.LogSpaceTitleLabel.AutoSize = true;
-            this.LogSpaceTitleLabel.Location = new System.Drawing.Point(6, 27);
-            this.LogSpaceTitleLabel.Name = "LogSpaceTitleLabel";
-            this.LogSpaceTitleLabel.Size = new System.Drawing.Size(168, 18);
-            this.LogSpaceTitleLabel.TabIndex = 0;
-            this.LogSpaceTitleLabel.Text = "LoggingSpace";
+            this.MySignalRSTTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.MySignalRSTTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.logDataBindingClassBindingSource, "MySignalRST", true));
+            this.MySignalRSTTextBox.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.MySignalRSTTextBox.Location = new System.Drawing.Point(386, 94);
+            this.MySignalRSTTextBox.Name = "MySignalRSTTextBox";
+            this.MySignalRSTTextBox.Size = new System.Drawing.Size(53, 25);
+            this.MySignalRSTTextBox.TabIndex = 5;
+            this.MySignalRSTTextBox.Text = "MySignalRST";
+            // 
+            // logDataBindingClassBindingSource
+            // 
+            this.logDataBindingClassBindingSource.DataSource = typeof(HamLifeLog.LogDataBindingClass);
+            // 
+            // CommentTextBox
+            // 
+            this.CommentTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.CommentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.logDataBindingClassBindingSource, "Comment", true));
+            this.CommentTextBox.Location = new System.Drawing.Point(448, 94);
+            this.CommentTextBox.Name = "CommentTextBox";
+            this.CommentTextBox.Size = new System.Drawing.Size(345, 25);
+            this.CommentTextBox.TabIndex = 4;
             // 
             // ShowDateLabel
             // 
@@ -90,6 +105,16 @@
             this.ShowDateLabel.Size = new System.Drawing.Size(345, 18);
             this.ShowDateLabel.TabIndex = 1;
             this.ShowDateLabel.Text = "yyyy/mm/dd hh:mm:ss";
+            // 
+            // LogSpaceTitleLabel
+            // 
+            this.LogSpaceTitleLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.LogSpaceTitleLabel.AutoSize = true;
+            this.LogSpaceTitleLabel.Location = new System.Drawing.Point(6, 27);
+            this.LogSpaceTitleLabel.Name = "LogSpaceTitleLabel";
+            this.LogSpaceTitleLabel.Size = new System.Drawing.Size(168, 18);
+            this.LogSpaceTitleLabel.TabIndex = 0;
+            this.LogSpaceTitleLabel.Text = "LoggingSpace";
             // 
             // CallTextBox
             // 
@@ -115,26 +140,6 @@
             this.HisSignalRSTTextBox.TabIndex = 4;
             this.HisSignalRSTTextBox.Text = "HisSignalRST";
             // 
-            // CommentTextBox
-            // 
-            this.CommentTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.CommentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.logDataBindingClassBindingSource, "Comment", true));
-            this.CommentTextBox.Location = new System.Drawing.Point(448, 94);
-            this.CommentTextBox.Name = "CommentTextBox";
-            this.CommentTextBox.Size = new System.Drawing.Size(345, 25);
-            this.CommentTextBox.TabIndex = 4;
-            // 
-            // MySignalRSTTextBox
-            // 
-            this.MySignalRSTTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.MySignalRSTTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.logDataBindingClassBindingSource, "MySignalRST", true));
-            this.MySignalRSTTextBox.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.MySignalRSTTextBox.Location = new System.Drawing.Point(386, 94);
-            this.MySignalRSTTextBox.Name = "MySignalRSTTextBox";
-            this.MySignalRSTTextBox.Size = new System.Drawing.Size(53, 25);
-            this.MySignalRSTTextBox.TabIndex = 5;
-            this.MySignalRSTTextBox.Text = "MySignalRST";
-            // 
             // ShowModeTextBox
             // 
             this.ShowModeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -158,9 +163,9 @@
             this.ShowBandsLabel.TabIndex = 7;
             this.ShowBandsLabel.Text = "Bands\r\n";
             // 
-            // logDataBindingClassBindingSource
+            // timer1
             // 
-            this.logDataBindingClassBindingSource.DataSource = typeof(HamLifeLog.LogDataBindingClass);
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // MainForm
             // 
@@ -192,6 +197,7 @@
         private System.Windows.Forms.Label ShowBandsLabel;
         private System.Windows.Forms.BindingSource logDataBindingClassBindingSource;
         protected System.Windows.Forms.TextBox CommentTextBox;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
