@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace HamLifeLog
 {
-    public partial class Form1 : Form
+    public partial class DoubleBufferTableLayoutPanel : TableLayoutPanel
     {
-        public Form1()
+        public DoubleBufferTableLayoutPanel()
         {
             InitializeComponent();
+        }
+
+        protected override void OnPaint(PaintEventArgs pe)
+        {
+            base.OnPaint(pe);
+            DoubleBuffered = true;
         }
     }
 }
