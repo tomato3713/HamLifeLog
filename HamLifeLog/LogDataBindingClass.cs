@@ -13,11 +13,12 @@ namespace HamLifeLog
     class LogDataBindingClass : INotifyPropertyChanged
     {
         private string _mode = "SSB";
+        private double _band = 7000.0;
         private string _hiscall="";
         private string _hisSignalRST = "59";
         private string _mySignalRST = "59";
         private double _frequecy = 7000.0;
-        private string _note = "";
+        private string _comment = "";
         private DateTime _rawDate = DateTime.UtcNow;
         private string _date = DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss");
 
@@ -27,6 +28,11 @@ namespace HamLifeLog
             get { return _mode; }
             set { _mode = value;
                 OnPropertyChanged("mode"); }
+        }
+        public double Band
+        {
+            get { return _band; }
+            set { _band = value; OnPropertyChanged("band"); }
         }
         public string HisCallSign {
             get { return _hiscall; }
@@ -44,9 +50,9 @@ namespace HamLifeLog
             get { return _frequecy; }
             set { _frequecy = value; OnPropertyChanged(nameof(Frequency)); }
         }
-        public string Note {
-            get { return _note; }
-            set { _note = value; OnPropertyChanged(nameof(Note)); }
+        public string Comment {
+            get { return _comment; }
+            set { _comment = value; OnPropertyChanged(nameof(Comment)); }
         }
         public string Date {
             get { return _date; }

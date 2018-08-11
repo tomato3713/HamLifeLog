@@ -21,14 +21,13 @@ namespace HamLifeLog
             CefSharp.Cef.Initialize();
             CefSharp.WinForms.ChromiumWebBrowser browser = new CefSharp.WinForms.ChromiumWebBrowser("http://www.google.co.jp");
             this.Controls.Add(browser);
-            /*
             this._data = new LogDataBindingClass();
 
             // asign Instance to data binding source.
-            this.bindingsour.DataSource = _data;
+            this.logDataBindingClassBindingSource.DataSource = _data;
 
             // フォーカスをブラウザとロガーで行き来する
-            webBrowser.PreviewKeyDown += new PreviewKeyDownEventHandler(WebBrowser_PreviewKeyDown);
+            browser.PreviewKeyDown += new PreviewKeyDownEventHandler(WebBrowser_PreviewKeyDown);
 
             timer = new System.Windows.Forms.Timer();
             timer.Tick += new EventHandler(this.Timer1_Tick);
@@ -45,7 +44,7 @@ namespace HamLifeLog
             switch (e.KeyCode)
             {
                 case Keys.F10:
-                    textBox_hisCallsign.Focus();
+                    HisSignalRSTTextBox.Focus();
                     break;
             }
 
@@ -55,7 +54,7 @@ namespace HamLifeLog
         {
         }
 
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
             // press enter key, move focus.
             switch (e.KeyCode)
@@ -77,18 +76,13 @@ namespace HamLifeLog
                         _data.Frequency, _data.Mode,
                         _data.HisSignalRST, _data.MySignalRST,
                         stationPrefix, stationQTH,
-                        stationName, _data.Note,
+                        stationName, _data.Comment,
                         band, operatorName
                     );
 
                     dataBase.AddLog();
                     break;
             }
-        }
-
-        private void FileFToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void NewCreateDataBaseToolStripMenuItem_Click(object sender, EventArgs e)
@@ -102,34 +96,18 @@ namespace HamLifeLog
             Close();
         }
 
-        private void WebBrowser_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-        {
-
-        }
-
-        private void DataBindingClassBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DataBindingClassBindingSource_DataSourceChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DataBindingClassBindingSource_ListChanged(object sender, ListChangedEventArgs e)
-        {
-
-        }
-
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            if (textBox_hisCallsign.Text != _data.HisCallSign) _data.HisCallSign = textBox_hisCallsign.Text;
-            if (textBox_MySignalRST.Text != _data.MySignalRST) _data.MySignalRST = textBox_MySignalRST.Text;
-            if (textBox_HisSignalRST.Text != _data.HisSignalRST) _data.HisSignalRST = textBox_HisSignalRST.Text;
-            if (NoteTextBox.Text != _data.Note) _data.Note = NoteTextBox.Text;
+            if (CallTextBox.Text != _data.HisCallSign) _data.HisCallSign = HisSignalRSTTextBox.Text;
+            if (MySignalRSTTextBox.Text != _data.MySignalRST) _data.MySignalRST = MySignalRSTTextBox.Text;
+            if (HisSignalRSTTextBox.Text != _data.HisSignalRST) _data.HisSignalRST = HisSignalRSTTextBox.Text;
+            if (CommentTextBox.Text != _data.Comment) _data.Comment = CommentTextBox.Text;
             if (DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss") != _data.Date) _data.RawDate = DateTime.UtcNow;
-            */
+        }
+
+        private void CallTextBox_Enter(object sender, EventArgs e)
+        {
+            CallTextBox.SelectAll();
         }
     }
 }
