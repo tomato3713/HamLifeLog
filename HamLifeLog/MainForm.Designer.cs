@@ -63,12 +63,13 @@
             this.doubleBufferTableLayoutPanel1.Controls.Add(this.HisSignalRSTTextBox, 2, 1);
             this.doubleBufferTableLayoutPanel1.Controls.Add(this.ShowModeTextBox, 1, 1);
             this.doubleBufferTableLayoutPanel1.Controls.Add(this.ShowBandsLabel, 1, 0);
-            this.doubleBufferTableLayoutPanel1.Location = new System.Drawing.Point(0, 305);
+            this.doubleBufferTableLayoutPanel1.Location = new System.Drawing.Point(0, 203);
+            this.doubleBufferTableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.doubleBufferTableLayoutPanel1.Name = "doubleBufferTableLayoutPanel1";
             this.doubleBufferTableLayoutPanel1.RowCount = 2;
             this.doubleBufferTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.doubleBufferTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.doubleBufferTableLayoutPanel1.Size = new System.Drawing.Size(799, 144);
+            this.doubleBufferTableLayoutPanel1.Size = new System.Drawing.Size(479, 96);
             this.doubleBufferTableLayoutPanel1.TabIndex = 0;
             // 
             // MySignalRSTTextBox
@@ -76,9 +77,10 @@
             this.MySignalRSTTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.MySignalRSTTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.logDataBindingClassBindingSource, "MySignalRST", true));
             this.MySignalRSTTextBox.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.MySignalRSTTextBox.Location = new System.Drawing.Point(386, 94);
+            this.MySignalRSTTextBox.Location = new System.Drawing.Point(232, 61);
+            this.MySignalRSTTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MySignalRSTTextBox.Name = "MySignalRSTTextBox";
-            this.MySignalRSTTextBox.Size = new System.Drawing.Size(53, 25);
+            this.MySignalRSTTextBox.Size = new System.Drawing.Size(31, 19);
             this.MySignalRSTTextBox.TabIndex = 5;
             this.MySignalRSTTextBox.Text = "MySignalRST";
             // 
@@ -90,9 +92,10 @@
             // 
             this.CommentTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.CommentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.logDataBindingClassBindingSource, "Comment", true));
-            this.CommentTextBox.Location = new System.Drawing.Point(448, 94);
+            this.CommentTextBox.Location = new System.Drawing.Point(270, 61);
+            this.CommentTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CommentTextBox.Name = "CommentTextBox";
-            this.CommentTextBox.Size = new System.Drawing.Size(345, 25);
+            this.CommentTextBox.Size = new System.Drawing.Size(204, 19);
             this.CommentTextBox.TabIndex = 4;
             // 
             // ShowDateLabel
@@ -100,9 +103,10 @@
             this.ShowDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ShowDateLabel.AutoSize = true;
             this.ShowDateLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.logDataBindingClassBindingSource, "Date", true));
-            this.ShowDateLabel.Location = new System.Drawing.Point(448, 27);
+            this.ShowDateLabel.Location = new System.Drawing.Point(270, 18);
+            this.ShowDateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ShowDateLabel.Name = "ShowDateLabel";
-            this.ShowDateLabel.Size = new System.Drawing.Size(345, 18);
+            this.ShowDateLabel.Size = new System.Drawing.Size(204, 12);
             this.ShowDateLabel.TabIndex = 1;
             this.ShowDateLabel.Text = "yyyy/mm/dd hh:mm:ss";
             // 
@@ -110,9 +114,10 @@
             // 
             this.LogSpaceTitleLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.LogSpaceTitleLabel.AutoSize = true;
-            this.LogSpaceTitleLabel.Location = new System.Drawing.Point(6, 27);
+            this.LogSpaceTitleLabel.Location = new System.Drawing.Point(5, 18);
+            this.LogSpaceTitleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LogSpaceTitleLabel.Name = "LogSpaceTitleLabel";
-            this.LogSpaceTitleLabel.Size = new System.Drawing.Size(168, 18);
+            this.LogSpaceTitleLabel.Size = new System.Drawing.Size(98, 12);
             this.LogSpaceTitleLabel.TabIndex = 0;
             this.LogSpaceTitleLabel.Text = "LoggingSpace";
             // 
@@ -122,9 +127,10 @@
             this.CallTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.CallTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.logDataBindingClassBindingSource, "HisCallSign", true));
             this.CallTextBox.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.CallTextBox.Location = new System.Drawing.Point(6, 94);
+            this.CallTextBox.Location = new System.Drawing.Point(5, 61);
+            this.CallTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CallTextBox.Name = "CallTextBox";
-            this.CallTextBox.Size = new System.Drawing.Size(168, 25);
+            this.CallTextBox.Size = new System.Drawing.Size(98, 19);
             this.CallTextBox.TabIndex = 3;
             this.CallTextBox.Text = "CALL";
             this.CallTextBox.Enter += new System.EventHandler(this.CallTextBox_Enter);
@@ -134,9 +140,10 @@
             this.HisSignalRSTTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.HisSignalRSTTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.logDataBindingClassBindingSource, "HisSignalRST", true));
             this.HisSignalRSTTextBox.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.HisSignalRSTTextBox.Location = new System.Drawing.Point(324, 94);
+            this.HisSignalRSTTextBox.Location = new System.Drawing.Point(194, 61);
+            this.HisSignalRSTTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.HisSignalRSTTextBox.Name = "HisSignalRSTTextBox";
-            this.HisSignalRSTTextBox.Size = new System.Drawing.Size(53, 25);
+            this.HisSignalRSTTextBox.Size = new System.Drawing.Size(31, 19);
             this.HisSignalRSTTextBox.TabIndex = 4;
             this.HisSignalRSTTextBox.Text = "HisSignalRST";
             // 
@@ -146,9 +153,10 @@
             this.ShowModeTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.ShowModeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.logDataBindingClassBindingSource, "Mode", true));
             this.ShowModeTextBox.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.ShowModeTextBox.Location = new System.Drawing.Point(183, 94);
+            this.ShowModeTextBox.Location = new System.Drawing.Point(110, 61);
+            this.ShowModeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ShowModeTextBox.Name = "ShowModeTextBox";
-            this.ShowModeTextBox.Size = new System.Drawing.Size(132, 25);
+            this.ShowModeTextBox.Size = new System.Drawing.Size(77, 19);
             this.ShowModeTextBox.TabIndex = 6;
             this.ShowModeTextBox.Text = "MODE";
             // 
@@ -157,9 +165,10 @@
             this.ShowBandsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ShowBandsLabel.AutoSize = true;
             this.ShowBandsLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.logDataBindingClassBindingSource, "Band", true));
-            this.ShowBandsLabel.Location = new System.Drawing.Point(183, 27);
+            this.ShowBandsLabel.Location = new System.Drawing.Point(110, 18);
+            this.ShowBandsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ShowBandsLabel.Name = "ShowBandsLabel";
-            this.ShowBandsLabel.Size = new System.Drawing.Size(132, 18);
+            this.ShowBandsLabel.Size = new System.Drawing.Size(77, 12);
             this.ShowBandsLabel.TabIndex = 7;
             this.ShowBandsLabel.Text = "Bands\r\n";
             // 
@@ -169,11 +178,12 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(480, 300);
             this.Controls.Add(this.doubleBufferTableLayoutPanel1);
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainForm_Load);
