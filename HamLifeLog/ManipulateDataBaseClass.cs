@@ -41,9 +41,16 @@ namespace HamLifeLog
             set { _sql_version = value; }
         }
 
-        private void NewCreate()
+        private Boolean NewCreate()
         {
+            // try to create an sqlite file if it doesn't exists.
+            if (System.IO.File.Exists(FileName))
+            {
+                return false;
+            }
             SQLiteConnection.CreateFile(FileName);
+            Console.WriteLine(FileName + "is exist.");
+            return true;
         }
 
         private SQLiteConnection NewConnection()
@@ -61,14 +68,14 @@ namespace HamLifeLog
             }
         }
 
-        private void CloseConnection(SQLiteConnection connection )
+        private void CloseConnection(SQLiteConnection connection)
         {
             connection.Close();
         }
 
         public void NewCreateTable()
         {
-            NewCreate();
+            if (!NewCreate()) { return; }
             var connection = NewConnection();
             try
             {
@@ -78,24 +85,29 @@ namespace HamLifeLog
                     Freq real, 
                     QSXFreq real,
                     Mode varchar(6),
-                    ContestName varchar(10), SNT varchar(10), RCV, varchar(15),
-                    CountryPrefix, StationPrefix varchar(15), QTH varchar(25),
+                    ContestName varchar(10), SNT varchar(10), RCV varchar(15),
+                    CountryPrefix varchar(8), StationPrefix varchar(15), QTH varchar(25),
                     Name varchar(20), Comment varchar(60), NR integer,
                     Sect varchar(8), Prec varchar(1), CK integer, ZN integer,
                     SentNR integer, Points integer, IsMultiplier1 integer, IsMultiplier2 integer,
-                    Power real, WPXPrefix varchar(8), Exchange1 varchar(20), RadioNR int,
-                    ContestNR int, isMultiplier3 integer, MiscText varchar(20), 
-                    IsRunQSO int, ContactType varchar(1), Run1Run2 int, 
+                    Power real, WPXPrefix varchar(8), Exchange1 varchar(20), RadioNR integer,
+                    ContestNR integer, isMultiplier3 integer, MiscText varchar(20), 
+                    IsRunQSO integer, ContactType varchar(1), Run1Run2 integer, 
                     GridSquare varchar(6), Operator varchar(20), Continent varchar(2),
-                    RoverLocation varchar(10), RadioInterfaced int, NetworkedCompNr int,
-                    NetBiosName, IsOriginal boolean
+                    RoverLocation varchar(10), RadioInterfaced integer, NetworkedCompNr integer,
+                    NetBiosName varchar(255), IsOriginal boolean
                     );";
                 SQLiteCommand com = new SQLiteCommand(sql, connection);
                 com.ExecuteNonQuery();
 
                 sql = @"CREATE TABLE Station (
-                    Call varchar(20), Name varchar(50), Street1 varchar(50), Street2 varchar(50), City varchar(30),
-                    State varchar(8), Zip varchar(25), Country varchar(30), GridSquare varchar(8), LicenseClass varchar(10),
+                    Call varchar(20), 
+                    Name varchar(50), 
+                    Street1 varchar(50), 
+                    Street2 varchar(50), 
+                    City varchar(30),
+                    State varchar(8), 
+                    Zip varchar(25), Country varchar(30), GridSquare varchar(8), LicenseClass varchar(10),
                     Latitude real, Logitude real, PacketNode varchar(10), ARRLSection varchar(4), Club varchar(50), 
                     IARUZone integer, CQZone integer, STXeq varchar(50), SPowe varchar(20), SAnte varchar(30),
                     SAntH1 varchar(15), SAntH2 varchar(15), RoverQTH varchar(10)
@@ -146,7 +158,7 @@ namespace HamLifeLog
 
         }
 
-        public void SetLoggingData(DateTime date, string call, double freq, string mode, string sendrst,string receivedrst, 
+        public void SetLoggingData(DateTime date, string call, double freq, string mode, string sendrst, string receivedrst,
             string stationPrefix, string myQTH, string name, string comment, double band, string operatorName)
         {
             loggingData.ts = date; loggingData.call = call; loggingData.freq = freq;

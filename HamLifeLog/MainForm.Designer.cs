@@ -41,8 +41,17 @@
             this.ShowBandsLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.browser = new System.Windows.Forms.WebBrowser();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createNewDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stationSettingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stationDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doubleBufferTableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logDataBindingClassBindingSource)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // doubleBufferTableLayoutPanel1
@@ -170,14 +179,76 @@
             // browser
             // 
             this.browser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.browser.Location = new System.Drawing.Point(0, 0);
+            this.browser.Location = new System.Drawing.Point(0, 33);
             this.browser.MinimumSize = new System.Drawing.Size(20, 20);
             this.browser.Name = "browser";
-            this.browser.Size = new System.Drawing.Size(800, 306);
+            this.browser.Size = new System.Drawing.Size(800, 273);
             this.browser.TabIndex = 1;
             this.browser.Url = new System.Uri("https://www.google.co.jp", System.UriKind.Absolute);
             this.browser.WebBrowserShortcutsEnabled = false;
             this.browser.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.WebBrowser_PreviewKeyDown);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileFToolStripMenuItem,
+            this.stationSettingToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 33);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileFToolStripMenuItem
+            // 
+            this.fileFToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createNewDatabaseToolStripMenuItem,
+            this.openDatabaseToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.exitToolStripMenuItem});
+            this.fileFToolStripMenuItem.Name = "fileFToolStripMenuItem";
+            this.fileFToolStripMenuItem.Size = new System.Drawing.Size(69, 29);
+            this.fileFToolStripMenuItem.Text = "File(&F)";
+            // 
+            // createNewDatabaseToolStripMenuItem
+            // 
+            this.createNewDatabaseToolStripMenuItem.Name = "createNewDatabaseToolStripMenuItem";
+            this.createNewDatabaseToolStripMenuItem.Size = new System.Drawing.Size(265, 30);
+            this.createNewDatabaseToolStripMenuItem.Text = "Create New Database";
+            this.createNewDatabaseToolStripMenuItem.Click += new System.EventHandler(this.NewCreateDataBaseToolStripMenuItem_Click);
+            // 
+            // openDatabaseToolStripMenuItem
+            // 
+            this.openDatabaseToolStripMenuItem.Name = "openDatabaseToolStripMenuItem";
+            this.openDatabaseToolStripMenuItem.Size = new System.Drawing.Size(265, 30);
+            this.openDatabaseToolStripMenuItem.Text = "Open Database";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(262, 6);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(265, 30);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            // 
+            // stationSettingToolStripMenuItem
+            // 
+            this.stationSettingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stationDataToolStripMenuItem});
+            this.stationSettingToolStripMenuItem.Name = "stationSettingToolStripMenuItem";
+            this.stationSettingToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
+            this.stationSettingToolStripMenuItem.Text = "Setting";
+            // 
+            // stationDataToolStripMenuItem
+            // 
+            this.stationDataToolStripMenuItem.Name = "stationDataToolStripMenuItem";
+            this.stationDataToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.stationDataToolStripMenuItem.Text = "StationData";
             // 
             // MainForm
             // 
@@ -186,7 +257,9 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.browser);
             this.Controls.Add(this.doubleBufferTableLayoutPanel1);
+            this.Controls.Add(this.menuStrip1);
             this.KeyPreview = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -194,7 +267,10 @@
             this.doubleBufferTableLayoutPanel1.ResumeLayout(false);
             this.doubleBufferTableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logDataBindingClassBindingSource)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -212,6 +288,14 @@
         protected System.Windows.Forms.TextBox CommentTextBox;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.WebBrowser browser;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileFToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createNewDatabaseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openDatabaseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stationSettingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stationDataToolStripMenuItem;
     }
 }
 
