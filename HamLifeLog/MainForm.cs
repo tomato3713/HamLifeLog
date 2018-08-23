@@ -44,7 +44,7 @@ namespace HamLifeLog
             switch (e.KeyCode)
             {
                 case Keys.F10:
-                    HisSignalRSTTextBox.Focus();
+                    CallTextBox.Focus();
                     break;
             }
 
