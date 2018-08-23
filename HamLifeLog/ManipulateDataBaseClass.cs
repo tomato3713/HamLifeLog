@@ -90,7 +90,7 @@ namespace HamLifeLog
                     Name varchar(20), Comment varchar(60), NR integer,
                     Sect varchar(8), Prec varchar(1), CK integer, ZN integer,
                     SentNR integer, Points integer, IsMultiplier1 integer, IsMultiplier2 integer,
-                    Power real, WPXPrefix varchar(8), Exchange1 varchar(20), RadioNR integer,
+                    Power real, Band real, WPXPrefix varchar(8), Exchange1 varchar(20), RadioNR integer,
                     ContestNR integer, isMultiplier3 integer, MiscText varchar(20), 
                     IsRunQSO integer, ContactType varchar(1), Run1Run2 integer, 
                     GridSquare varchar(6), Operator varchar(20), Continent varchar(2),
@@ -127,10 +127,7 @@ namespace HamLifeLog
             var command = connection.CreateCommand();
             try
             {
-                command.CommandText = @"INSERT INTO DXLOG (
-                    TS, Call, Freq, Mode, SNT, RCV, 
-                    StationPrefix, QTH, Name, Comment
-                    Band, Operator, IsOriginal";
+                command.CommandText = @"INSERT INTO DXLOG ( TS, Call, Freq, Mode, SNT, RCV, StationPrefix, QTH, Name, Comment, Band, Operator, IsOriginal) VALUES ( @TS, @Call, @Freq, @Mode, @SNT, @RCV, @StationPrefix, @QTH, @Name, @Comment, @Band, @Operator, @IsOriginal)"; 
                 command.Parameters.Add(new SQLiteParameter("@IsOriginal", true));
                 command.Parameters.Add(new SQLiteParameter("@TS", loggingData.ts));
                 command.Parameters.Add(new SQLiteParameter("@Call", loggingData.call));
@@ -150,6 +147,7 @@ namespace HamLifeLog
             catch (SQLiteException exc)
             {
                 System.Diagnostics.Debug.WriteLine(exc.Message);
+                System.Windows.Forms.MessageBox.Show("Fault to add Log: ", exc.Message);
             }
             finally
             {

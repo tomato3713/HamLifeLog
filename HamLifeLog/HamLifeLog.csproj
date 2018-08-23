@@ -95,6 +95,12 @@
     <Compile Include="DoubleBufferTableLayoutPanel.Designer.cs">
       <DependentUpon>DoubleBufferTableLayoutPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="EnterStationDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnterStationDataForm.Designer.cs">
+      <DependentUpon>EnterStationDataForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DoubleBufferTableLayoutPanel.resx">
       <DependentUpon>DoubleBufferTableLayoutPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnterStationDataForm.resx">
+      <DependentUpon>EnterStationDataForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

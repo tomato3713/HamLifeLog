@@ -60,9 +60,9 @@ namespace HamLifeLog
             switch (e.KeyCode)
             {
                 case Keys.Enter:
-                    bool forward = e.Modifiers != Keys.Shift;
-                    this.SelectNextControl(this.ActiveControl, forward, true, true, true);
-                    e.Handled = true;
+                    if (CallTextBox.Focused) { HisSignalRSTTextBox.Focus(); }
+                    else if (HisSignalRSTTextBox.Focused) { MySignalRSTTextBox.Focus(); }
+                    else if (MySignalRSTTextBox.Focused) { CommentTextBox.Focus(); }
                     break;
                 case Keys.F9:
                     // Add now writing Log
@@ -109,6 +109,14 @@ namespace HamLifeLog
         private void CallTextBox_Enter(object sender, EventArgs e)
         {
             CallTextBox.SelectAll();
+        }
+
+        private void StationDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // 子フォームを表示してステーションデータを入力させる。
+            Form EnterStationDataForm = new EnterStationDataForm();
+            // display the new form.
+            EnterStationDataForm.Show();
         }
     }
 }
