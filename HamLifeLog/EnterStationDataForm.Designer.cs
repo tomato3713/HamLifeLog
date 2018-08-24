@@ -34,29 +34,29 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.doubleBufferTableLayoutPanel1 = new HamLifeLog.DoubleBufferTableLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.EmailAddressTextBox = new System.Windows.Forms.TextBox();
+            this.ClubTextBox = new System.Windows.Forms.TextBox();
+            this.ITUZoneTextBox = new System.Windows.Forms.TextBox();
+            this.CQZoneTextBox = new System.Windows.Forms.TextBox();
+            this.GridSquareTextBox = new System.Windows.Forms.TextBox();
+            this.JCCNumTextBox = new System.Windows.Forms.TextBox();
+            this.CountryTextBox = new System.Windows.Forms.TextBox();
+            this.CityTextBox = new System.Windows.Forms.TextBox();
+            this.StateTextBox = new System.Windows.Forms.TextBox();
+            this.Address2TextBox = new System.Windows.Forms.TextBox();
+            this.Address1TextBox = new System.Windows.Forms.TextBox();
+            this.NameTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.CallTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.doubleBufferTableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,33 +123,33 @@
             this.doubleBufferTableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.doubleBufferTableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.doubleBufferTableLayoutPanel1.Controls.Add(this.button2, 1, 13);
-            this.doubleBufferTableLayoutPanel1.Controls.Add(this.textBox13, 1, 12);
-            this.doubleBufferTableLayoutPanel1.Controls.Add(this.textBox12, 1, 11);
-            this.doubleBufferTableLayoutPanel1.Controls.Add(this.textBox11, 1, 10);
-            this.doubleBufferTableLayoutPanel1.Controls.Add(this.textBox10, 1, 9);
-            this.doubleBufferTableLayoutPanel1.Controls.Add(this.textBox9, 1, 8);
-            this.doubleBufferTableLayoutPanel1.Controls.Add(this.textBox8, 1, 7);
-            this.doubleBufferTableLayoutPanel1.Controls.Add(this.textBox7, 1, 6);
-            this.doubleBufferTableLayoutPanel1.Controls.Add(this.textBox6, 1, 5);
-            this.doubleBufferTableLayoutPanel1.Controls.Add(this.textBox5, 1, 4);
-            this.doubleBufferTableLayoutPanel1.Controls.Add(this.textBox4, 1, 3);
-            this.doubleBufferTableLayoutPanel1.Controls.Add(this.textBox3, 1, 2);
-            this.doubleBufferTableLayoutPanel1.Controls.Add(this.textBox2, 1, 1);
+            this.doubleBufferTableLayoutPanel1.Controls.Add(this.EmailAddressTextBox, 1, 12);
+            this.doubleBufferTableLayoutPanel1.Controls.Add(this.ClubTextBox, 1, 11);
+            this.doubleBufferTableLayoutPanel1.Controls.Add(this.ITUZoneTextBox, 1, 10);
+            this.doubleBufferTableLayoutPanel1.Controls.Add(this.CQZoneTextBox, 1, 9);
+            this.doubleBufferTableLayoutPanel1.Controls.Add(this.GridSquareTextBox, 1, 8);
+            this.doubleBufferTableLayoutPanel1.Controls.Add(this.JCCNumTextBox, 1, 7);
+            this.doubleBufferTableLayoutPanel1.Controls.Add(this.CountryTextBox, 1, 6);
+            this.doubleBufferTableLayoutPanel1.Controls.Add(this.CityTextBox, 1, 5);
+            this.doubleBufferTableLayoutPanel1.Controls.Add(this.StateTextBox, 1, 4);
+            this.doubleBufferTableLayoutPanel1.Controls.Add(this.Address2TextBox, 1, 3);
+            this.doubleBufferTableLayoutPanel1.Controls.Add(this.Address1TextBox, 1, 2);
+            this.doubleBufferTableLayoutPanel1.Controls.Add(this.NameTextBox, 1, 1);
             this.doubleBufferTableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.doubleBufferTableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.doubleBufferTableLayoutPanel1.Controls.Add(this.label4, 0, 3);
             this.doubleBufferTableLayoutPanel1.Controls.Add(this.label6, 0, 4);
             this.doubleBufferTableLayoutPanel1.Controls.Add(this.label5, 0, 5);
-            this.doubleBufferTableLayoutPanel1.Controls.Add(this.label7, 0, 6);
-            this.doubleBufferTableLayoutPanel1.Controls.Add(this.label8, 0, 7);
             this.doubleBufferTableLayoutPanel1.Controls.Add(this.label9, 0, 8);
             this.doubleBufferTableLayoutPanel1.Controls.Add(this.label10, 0, 9);
             this.doubleBufferTableLayoutPanel1.Controls.Add(this.label11, 0, 10);
             this.doubleBufferTableLayoutPanel1.Controls.Add(this.label12, 0, 11);
             this.doubleBufferTableLayoutPanel1.Controls.Add(this.label13, 0, 12);
             this.doubleBufferTableLayoutPanel1.Controls.Add(this.label2, 0, 1);
-            this.doubleBufferTableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
+            this.doubleBufferTableLayoutPanel1.Controls.Add(this.CallTextBox, 1, 0);
             this.doubleBufferTableLayoutPanel1.Controls.Add(this.button1, 0, 13);
+            this.doubleBufferTableLayoutPanel1.Controls.Add(this.label8, 0, 6);
+            this.doubleBufferTableLayoutPanel1.Controls.Add(this.label7, 0, 7);
             this.doubleBufferTableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.doubleBufferTableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.doubleBufferTableLayoutPanel1.Name = "doubleBufferTableLayoutPanel1";
@@ -174,6 +174,115 @@
             this.doubleBufferTableLayoutPanel1.Size = new System.Drawing.Size(515, 482);
             this.doubleBufferTableLayoutPanel1.TabIndex = 5;
             // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(262, 446);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(247, 30);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "Close";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            // 
+            // EmailAddressTextBox
+            // 
+            this.EmailAddressTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.EmailAddressTextBox.Location = new System.Drawing.Point(262, 412);
+            this.EmailAddressTextBox.Name = "EmailAddressTextBox";
+            this.EmailAddressTextBox.Size = new System.Drawing.Size(247, 25);
+            this.EmailAddressTextBox.TabIndex = 25;
+            // 
+            // ClubTextBox
+            // 
+            this.ClubTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ClubTextBox.Location = new System.Drawing.Point(262, 378);
+            this.ClubTextBox.Name = "ClubTextBox";
+            this.ClubTextBox.Size = new System.Drawing.Size(247, 25);
+            this.ClubTextBox.TabIndex = 24;
+            // 
+            // ITUZoneTextBox
+            // 
+            this.ITUZoneTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ITUZoneTextBox.Location = new System.Drawing.Point(262, 344);
+            this.ITUZoneTextBox.Name = "ITUZoneTextBox";
+            this.ITUZoneTextBox.Size = new System.Drawing.Size(247, 25);
+            this.ITUZoneTextBox.TabIndex = 23;
+            // 
+            // CQZoneTextBox
+            // 
+            this.CQZoneTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.CQZoneTextBox.Location = new System.Drawing.Point(262, 310);
+            this.CQZoneTextBox.Name = "CQZoneTextBox";
+            this.CQZoneTextBox.Size = new System.Drawing.Size(247, 25);
+            this.CQZoneTextBox.TabIndex = 22;
+            // 
+            // GridSquareTextBox
+            // 
+            this.GridSquareTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.GridSquareTextBox.Location = new System.Drawing.Point(262, 278);
+            this.GridSquareTextBox.Name = "GridSquareTextBox";
+            this.GridSquareTextBox.Size = new System.Drawing.Size(247, 25);
+            this.GridSquareTextBox.TabIndex = 21;
+            // 
+            // JCCNumTextBox
+            // 
+            this.JCCNumTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.JCCNumTextBox.Location = new System.Drawing.Point(262, 244);
+            this.JCCNumTextBox.Name = "JCCNumTextBox";
+            this.JCCNumTextBox.Size = new System.Drawing.Size(247, 25);
+            this.JCCNumTextBox.TabIndex = 20;
+            // 
+            // CountryTextBox
+            // 
+            this.CountryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.CountryTextBox.Location = new System.Drawing.Point(262, 210);
+            this.CountryTextBox.Name = "CountryTextBox";
+            this.CountryTextBox.Size = new System.Drawing.Size(247, 25);
+            this.CountryTextBox.TabIndex = 19;
+            // 
+            // CityTextBox
+            // 
+            this.CityTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.CityTextBox.Location = new System.Drawing.Point(262, 176);
+            this.CityTextBox.Name = "CityTextBox";
+            this.CityTextBox.Size = new System.Drawing.Size(247, 25);
+            this.CityTextBox.TabIndex = 18;
+            // 
+            // StateTextBox
+            // 
+            this.StateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.StateTextBox.Location = new System.Drawing.Point(262, 142);
+            this.StateTextBox.Name = "StateTextBox";
+            this.StateTextBox.Size = new System.Drawing.Size(247, 25);
+            this.StateTextBox.TabIndex = 17;
+            // 
+            // Address2TextBox
+            // 
+            this.Address2TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Address2TextBox.Location = new System.Drawing.Point(262, 108);
+            this.Address2TextBox.Name = "Address2TextBox";
+            this.Address2TextBox.Size = new System.Drawing.Size(247, 25);
+            this.Address2TextBox.TabIndex = 16;
+            // 
+            // Address1TextBox
+            // 
+            this.Address1TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Address1TextBox.Location = new System.Drawing.Point(262, 74);
+            this.Address1TextBox.Name = "Address1TextBox";
+            this.Address1TextBox.Size = new System.Drawing.Size(247, 25);
+            this.Address1TextBox.TabIndex = 15;
+            // 
+            // NameTextBox
+            // 
+            this.NameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.NameTextBox.Location = new System.Drawing.Point(262, 40);
+            this.NameTextBox.Name = "NameTextBox";
+            this.NameTextBox.Size = new System.Drawing.Size(247, 25);
+            this.NameTextBox.TabIndex = 14;
+            // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -184,28 +293,6 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "State";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 213);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(247, 18);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "State";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 247);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(247, 18);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Country";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label9
             // 
@@ -262,109 +349,13 @@
             this.label13.Text = "Email Address";
             this.label13.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // textBox1
+            // CallTextBox
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(262, 6);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(247, 25);
-            this.textBox1.TabIndex = 13;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(262, 40);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(247, 25);
-            this.textBox2.TabIndex = 14;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(262, 74);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(247, 25);
-            this.textBox3.TabIndex = 15;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Location = new System.Drawing.Point(262, 108);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(247, 25);
-            this.textBox4.TabIndex = 16;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Location = new System.Drawing.Point(262, 142);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(247, 25);
-            this.textBox5.TabIndex = 17;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.Location = new System.Drawing.Point(262, 176);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(247, 25);
-            this.textBox6.TabIndex = 18;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Location = new System.Drawing.Point(262, 210);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(247, 25);
-            this.textBox7.TabIndex = 19;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox8.Location = new System.Drawing.Point(262, 244);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(247, 25);
-            this.textBox8.TabIndex = 20;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox9.Location = new System.Drawing.Point(262, 278);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(247, 25);
-            this.textBox9.TabIndex = 21;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox10.Location = new System.Drawing.Point(262, 310);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(247, 25);
-            this.textBox10.TabIndex = 22;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox11.Location = new System.Drawing.Point(262, 344);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(247, 25);
-            this.textBox11.TabIndex = 23;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox12.Location = new System.Drawing.Point(262, 378);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(247, 25);
-            this.textBox12.TabIndex = 24;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox13.Location = new System.Drawing.Point(262, 412);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(247, 25);
-            this.textBox13.TabIndex = 25;
+            this.CallTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.CallTextBox.Location = new System.Drawing.Point(262, 6);
+            this.CallTextBox.Name = "CallTextBox";
+            this.CallTextBox.Size = new System.Drawing.Size(247, 25);
+            this.CallTextBox.TabIndex = 13;
             // 
             // button1
             // 
@@ -377,19 +368,29 @@
             this.button1.TabIndex = 26;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // button2
+            // label8
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(262, 446);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(247, 30);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Close";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 213);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(247, 18);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Country";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 247);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(247, 18);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "JCC Number";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // EnterStationDataForm
             // 
@@ -416,24 +417,24 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox EmailAddressTextBox;
+        private System.Windows.Forms.TextBox ClubTextBox;
+        private System.Windows.Forms.TextBox ITUZoneTextBox;
+        private System.Windows.Forms.TextBox CQZoneTextBox;
+        private System.Windows.Forms.TextBox GridSquareTextBox;
+        private System.Windows.Forms.TextBox JCCNumTextBox;
+        private System.Windows.Forms.TextBox CountryTextBox;
+        private System.Windows.Forms.TextBox CityTextBox;
+        private System.Windows.Forms.TextBox StateTextBox;
+        private System.Windows.Forms.TextBox Address2TextBox;
+        private System.Windows.Forms.TextBox Address1TextBox;
+        private System.Windows.Forms.TextBox NameTextBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox CallTextBox;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
     }
