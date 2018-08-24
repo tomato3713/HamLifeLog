@@ -18,8 +18,6 @@ namespace HamLifeLog
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            CefSharp.Cef.Initialize();
-            CefSharp.WinForms.ChromiumWebBrowser browser = new CefSharp.WinForms.ChromiumWebBrowser("http://www.google.co.jp");
             this.Controls.Add(browser);
             this._data = new LogDataBindingClass();
 

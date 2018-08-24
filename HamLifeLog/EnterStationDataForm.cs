@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using Newtonsoft.Json;
 
 namespace HamLifeLog
 {
     public partial class EnterStationDataForm : Form
     {
+        private string stationDataFile = "stationData.json";
+
         public EnterStationDataForm()
         {
             InitializeComponent();
@@ -48,6 +51,75 @@ namespace HamLifeLog
 #else
             string json = JsonConvert.SerializeObject(stationData, Formatting.None);
 #endif
+            // write file
+            Encoding utf8Enc = Encoding.GetEncoding("UTF-8");
+            try
+            {
+                StreamWriter writer = new StreamWriter(stationDataFile, false, utf8Enc);
+                writer.WriteLine(json);
+                writer.Close();
+            }
+            catch(UnauthorizedAccessException exc)
+            {
+                System.Windows.Forms.MessageBox.Show("Fault to write staton data to " + stationDataFile  + "\n" +
+                    "Error : " + exc.Message + "\n"+
+                    "Not have needed authorization.");
+            }
+            catch(IOException exc)
+            {
+                System.Windows.Forms.MessageBox.Show("Fault to write staton data to " + stationDataFile + "\n" +
+                    "Error : " + exc.Message + "\n"+
+                    "May File is locked.");
+            }
+            finally
+            {
+                System.Windows.Forms.MessageBox.Show("Written Station data to " + stationDataFile);
+            }
+        }
+
+        private void EnterStationDataForm_Load(object sender, EventArgs e)
+        {
+            // load stationData.json
+            if (File.Exists(stationDataFile))
+            {
+                // read stationdataFile
+                try
+                {
+                    Encoding utf8Enc = Encoding.GetEncoding("UTF-8");
+                    StreamReader reader = new StreamReader(
+                        stationDataFile, utf8Enc);
+                    string json = reader.ReadToEnd();
+                    reader.Close();
+
+                    StationData stationData = JsonConvert.DeserializeObject<StationData>(json);
+                    // enter textBox
+                    CallTextBox.Text = stationData.Call;
+                    NameTextBox.Text = stationData.Name;
+                    Address1TextBox.Text = stationData.Address1;
+                    Address2TextBox.Text = stationData.Address2;
+                    StateTextBox.Text = stationData.State;
+                    CityTextBox.Text = stationData.City;
+                    CountryTextBox.Text = stationData.Coutry;
+                    JCCNumTextBox.Text = stationData.JCCNum;
+                    GridSquareTextBox.Text = stationData.GridSquare;
+                    CQZoneTextBox.Text = stationData.CQZone;
+                    ITUZoneTextBox.Text = stationData.ITUZone;
+                    ClubTextBox.Text = stationData.Club;
+                    EmailAddressTextBox.Text = stationData.EmailAddress;
+                }
+                catch (UnauthorizedAccessException exc)
+                {
+                    System.Windows.Forms.MessageBox.Show("Fault to read staton data to " + stationDataFile + "\n" +
+                        "Error : " + exc.Message + "\n" +
+                        "Not have needed authorization.");
+                }
+                catch (IOException exc)
+                {
+                    System.Windows.Forms.MessageBox.Show("Fault to read staton data to " + stationDataFile + "\n" +
+                        "Error : " + exc.Message + "\n" +
+                        "May File is locked.");
+                }
+            }
         }
     }
     class StationData
