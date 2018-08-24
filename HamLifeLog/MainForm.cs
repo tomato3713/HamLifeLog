@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 using SimpleBrowser;
+using Newtonsoft.Json;
+using System.IO;
+using System.Text;
 
 namespace HamLifeLog
 {
@@ -9,6 +12,8 @@ namespace HamLifeLog
         private LogDataBindingClass _data;
         private ManipulateDataBaseClass dataBase;
         private System.Windows.Forms.Timer timer;
+        private string stationDataFile;
+        StationData stationData;
 
         public MainForm()
         {
@@ -18,7 +23,30 @@ namespace HamLifeLog
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            this.Controls.Add(browser);
+            // load station data
+            try
+            {
+                Encoding utf8Enc = Encoding.GetEncoding("UTF-8");
+                StreamReader reader = new StreamReader(
+                    stationDataFile, utf8Enc);
+                string json = reader.ReadToEnd();
+                reader.Close();
+
+                StationData stationData = JsonConvert.DeserializeObject<StationData>(json);
+            }
+            catch (UnauthorizedAccessException exc)
+            {
+                System.Windows.Forms.MessageBox.Show("Fault to read staton data to " + stationDataFile + "\n" +
+                    "Error : " + exc.Message + "\n" +
+                    "Not have needed authorization.");
+            }
+            catch (IOException exc)
+            {
+                System.Windows.Forms.MessageBox.Show("Fault to read staton data to " + stationDataFile + "\n" +
+                    "Error : " + exc.Message + "\n" +
+                    "May File is locked.");
+            }
+
             this._data = new LogDataBindingClass();
 
             // asign Instance to data binding source.
@@ -112,9 +140,11 @@ namespace HamLifeLog
         private void StationDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // 子フォームを表示してステーションデータを入力させる。
-            Form EnterStationDataForm = new EnterStationDataForm();
+            Form EnterStationDataForm = new EnterStationDataForm(stationDataFile);
             // display the new form.
-            EnterStationDataForm.Show();
+            EnterStationDataForm.ShowDialog();
+
+            // read sationDataFile
         }
     }
 }

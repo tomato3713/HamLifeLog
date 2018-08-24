@@ -14,11 +14,12 @@ namespace HamLifeLog
 {
     public partial class EnterStationDataForm : Form
     {
-        private string stationDataFile = "stationData.json";
+        private string stationDataFile;
 
-        public EnterStationDataForm()
+        public EnterStationDataForm(string fname)
         {
             InitializeComponent();
+            stationDataFile = fname;
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -122,7 +123,7 @@ namespace HamLifeLog
             }
         }
     }
-    class StationData
+    public class StationData
     {
         public string Call { get; set; }
         public string Name { get; set; }
