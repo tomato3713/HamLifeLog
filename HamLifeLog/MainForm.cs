@@ -30,13 +30,7 @@ namespace HamLifeLog
             if (File.Exists(stationDataFile)) LoadStationData();
             else
             {
-                // 子フォームを表示してステーションデータを入力させる。
-                Form EnterStationDataForm = new EnterStationDataForm(stationDataFile);
-                // display the new form.
-                EnterStationDataForm.ShowDialog();
-
-                // read sationDataFile
-                LoadStationData();
+                StationDataToolStripMenuItem_Click(sender, e);
             }
 
             this._data = new LogDataBindingClass();
@@ -63,7 +57,7 @@ namespace HamLifeLog
                 string json = reader.ReadToEnd();
                 reader.Close();
 
-                StationData stationData = JsonConvert.DeserializeObject<StationData>(json);
+                stationData = JsonConvert.DeserializeObject<StationData>(json);
             }
             catch (UnauthorizedAccessException exc)
             {
@@ -156,10 +150,15 @@ namespace HamLifeLog
 
         private void StationDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // 子フォームを表示してステーションデータを入力させる。
-            Form EnterStationDataForm = new EnterStationDataForm(stationDataFile);
-            // display the new form.
-            EnterStationDataForm.ShowDialog();
+            do
+            {
+                // 子フォームを表示してステーションデータを入力させる。
+                Form EnterStationDataForm = new EnterStationDataForm(stationDataFile);
+                // display the new form.
+                EnterStationDataForm.ShowDialog();
+
+                LoadStationData();
+            } while (stationData.Call == "");
 
             // read sationDataFile
             LoadStationData();

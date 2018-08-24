@@ -24,6 +24,7 @@ namespace HamLifeLog
 
         private void Button2_Click(object sender, EventArgs e)
         {
+            Button1_Click(sender, e);
             Close();
         }
 
