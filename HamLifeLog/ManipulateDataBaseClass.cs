@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
+using System.Windows.Forms;
 
 namespace HamLifeLog
 {
@@ -75,11 +76,19 @@ namespace HamLifeLog
 
         public void NewCreateTable()
         {
-            if (!NewCreate()) { return; }
+            if (!NewCreate()) {
+                // if database file exists, ask if proceed this process.
+                string msg = _fname + " is existed. Do you want to use this database?";
+                string caption = "Delete";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(msg, caption, buttons, MessageBoxIcon.Question);
+                if( result == DialogResult.No) { return; }
+
+            }
             var connection = NewConnection();
             try
             {
-                string sql = @"CREATE TABLE DXLOG ( 
+                string sql = @"CREATE TABLE IF NOT EXISTS DXLOG ( 
                     TS datetime, 
                     Call varchar(15), 
                     Freq real, 
@@ -100,7 +109,7 @@ namespace HamLifeLog
                 SQLiteCommand com = new SQLiteCommand(sql, connection);
                 com.ExecuteNonQuery();
 
-                sql = @"CREATE TABLE Station (
+                sql = @"CREATE TABLE IF NOT EXISTS Station (
                     Call varchar(20), 
                     Name varchar(50), 
                     Street1 varchar(50), 

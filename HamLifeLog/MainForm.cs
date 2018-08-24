@@ -11,9 +11,12 @@ namespace HamLifeLog
     {
         private LogDataBindingClass _data;
         private ManipulateDataBaseClass dataBase;
-        private System.Windows.Forms.Timer timer;
-        private string stationDataFile;
-        StationData stationData;
+        private Timer timer;
+        private string stationDataFile = "stationData.json";
+        private StationData stationData;
+
+        public string StationDataFile { get => stationDataFile; set => stationDataFile = value; }
+        public StationData StationData { get => stationData; set => stationData = value; }
 
         public MainForm()
         {
@@ -24,11 +27,39 @@ namespace HamLifeLog
         private void MainForm_Load(object sender, EventArgs e)
         {
             // load station data
+            if (File.Exists(stationDataFile)) LoadStationData();
+            else
+            {
+                // 子フォームを表示してステーションデータを入力させる。
+                Form EnterStationDataForm = new EnterStationDataForm(stationDataFile);
+                // display the new form.
+                EnterStationDataForm.ShowDialog();
+
+                // read sationDataFile
+                LoadStationData();
+            }
+
+            this._data = new LogDataBindingClass();
+
+            // asign Instance to data binding source.
+            this.logDataBindingClassBindingSource.DataSource = _data;
+
+            // フォーカスをブラウザとロガーで行き来する
+            browser.PreviewKeyDown += new PreviewKeyDownEventHandler(WebBrowser_PreviewKeyDown);
+
+            timer = new System.Windows.Forms.Timer();
+            timer.Tick += new EventHandler(this.Timer1_Tick);
+            timer.Interval = 1000;
+
+            timer.Start();
+        }
+
+        private void LoadStationData()
+        {
             try
             {
                 Encoding utf8Enc = Encoding.GetEncoding("UTF-8");
-                StreamReader reader = new StreamReader(
-                    stationDataFile, utf8Enc);
+                StreamReader reader = new StreamReader(stationDataFile, utf8Enc);
                 string json = reader.ReadToEnd();
                 reader.Close();
 
@@ -46,20 +77,6 @@ namespace HamLifeLog
                     "Error : " + exc.Message + "\n" +
                     "May File is locked.");
             }
-
-            this._data = new LogDataBindingClass();
-
-            // asign Instance to data binding source.
-            this.logDataBindingClassBindingSource.DataSource = _data;
-
-            // フォーカスをブラウザとロガーで行き来する
-            browser.PreviewKeyDown += new PreviewKeyDownEventHandler(WebBrowser_PreviewKeyDown);
-
-            timer = new System.Windows.Forms.Timer();
-            timer.Tick += new EventHandler(this.Timer1_Tick);
-            timer.Interval = 1000;
-
-            timer.Start();
         }
 
 
@@ -145,6 +162,7 @@ namespace HamLifeLog
             EnterStationDataForm.ShowDialog();
 
             // read sationDataFile
+            LoadStationData();
         }
     }
 }
