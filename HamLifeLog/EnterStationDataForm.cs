@@ -24,13 +24,14 @@ namespace HamLifeLog
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            SaveStationData();
             Close();
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            if(CallTextBox.Text == "") { return; }
             SaveStationData();
+            Close();
         }
         private void SaveStationData()
         {

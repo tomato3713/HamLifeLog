@@ -354,6 +354,9 @@
             // CallTextBox
             // 
             this.CallTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.CallTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.CallTextBox.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.CallTextBox.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.CallTextBox.Location = new System.Drawing.Point(262, 6);
             this.CallTextBox.Name = "CallTextBox";
             this.CallTextBox.Size = new System.Drawing.Size(247, 25);
@@ -368,7 +371,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(247, 30);
             this.button1.TabIndex = 26;
-            this.button1.Text = "Save";
+            this.button1.Text = "Save & Close";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 

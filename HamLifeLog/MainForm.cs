@@ -42,8 +42,9 @@ namespace HamLifeLog
 
             dataBase = new ManipulateDataBaseClass(_assemblyDirectoryPath);
 
-            // load station data
-            StationDataToolStripMenuItem_Click(sender, e);
+            // load station data if not found station data file
+            string stationDataFilePath = System.IO.Path.Combine(settingDataFilePath, stationDataFileName);
+            if(!System.IO.File.Exists(stationDataFilePath)) StationDataToolStripMenuItem_Click(sender, e);
 
             this._data = new LogDataBindingClass();
 
@@ -197,23 +198,18 @@ namespace HamLifeLog
         private void StationDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string stationDataFilePath = System.IO.Path.Combine(settingDataFilePath, stationDataFileName);
-            do
-            {
-                // 子フォームを表示してステーションデータを入力させる。
-                Form EnterStationDataForm = new EnterStationDataForm(stationDataFilePath);
-                // display the new form.
-                EnterStationDataForm.ShowDialog();
-                // reload station data file
-                LoadStationData();
-            } while (stationData.Call == "");
-
-            // read sationDataFile
+            // 子フォームを表示してステーションデータを入力させる。
+            Form EnterStationDataForm = new EnterStationDataForm(stationDataFilePath);
+            // display the new form.
+            EnterStationDataForm.ShowDialog();
+            // reload station data file
             LoadStationData();
         }
 
         private void HelpHToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // open help form.
+            System.Windows.Forms.MessageBox.Show("未実装です");
         }
     }
 }
