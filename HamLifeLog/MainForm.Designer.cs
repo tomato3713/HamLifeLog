@@ -256,6 +256,7 @@
             this.ShowBandsLabel.Size = new System.Drawing.Size(182, 18);
             this.ShowBandsLabel.TabIndex = 7;
             this.ShowBandsLabel.Text = "Bands\r\n";
+            this.ShowBandsLabel.Click += new System.EventHandler(this.ShowBandsLabel_Click);
             // 
             // ShowModeLabel
             // 

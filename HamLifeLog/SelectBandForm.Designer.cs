@@ -30,33 +30,33 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Button135kHz = new System.Windows.Forms.Button();
+            this.Button19kHz = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Button35MHz = new System.Windows.Forms.Button();
+            this.Button7MHz = new System.Windows.Forms.Button();
+            this.Button10MHz = new System.Windows.Forms.Button();
+            this.Button14MHz = new System.Windows.Forms.Button();
+            this.Button18MHz = new System.Windows.Forms.Button();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Button21MHz = new System.Windows.Forms.Button();
+            this.Button24MHz = new System.Windows.Forms.Button();
+            this.Button28MHz = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.Button144MHz = new System.Windows.Forms.Button();
+            this.Button50MHz = new System.Windows.Forms.Button();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
+            this.Button430MHz = new System.Windows.Forms.Button();
+            this.Button1200MHz = new System.Windows.Forms.Button();
+            this.Button2400MHz = new System.Windows.Forms.Button();
+            this.Button5600Mhz = new System.Windows.Forms.Button();
+            this.Button10GHz = new System.Windows.Forms.Button();
+            this.Button24GHz = new System.Windows.Forms.Button();
+            this.Button47GHz = new System.Windows.Forms.Button();
+            this.Button75GHz = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
@@ -77,146 +77,19 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.label1);
-            this.flowLayoutPanel2.Controls.Add(this.button3);
-            this.flowLayoutPanel2.Controls.Add(this.button2);
+            this.flowLayoutPanel2.Controls.Add(this.Button135kHz);
+            this.flowLayoutPanel2.Controls.Add(this.Button19kHz);
             this.flowLayoutPanel2.Controls.Add(this.label2);
-            this.flowLayoutPanel2.Controls.Add(this.button7);
-            this.flowLayoutPanel2.Controls.Add(this.button8);
-            this.flowLayoutPanel2.Controls.Add(this.button1);
-            this.flowLayoutPanel2.Controls.Add(this.button9);
-            this.flowLayoutPanel2.Controls.Add(this.button10);
+            this.flowLayoutPanel2.Controls.Add(this.Button35MHz);
+            this.flowLayoutPanel2.Controls.Add(this.Button7MHz);
+            this.flowLayoutPanel2.Controls.Add(this.Button10MHz);
+            this.flowLayoutPanel2.Controls.Add(this.Button14MHz);
+            this.flowLayoutPanel2.Controls.Add(this.Button18MHz);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(190, 495);
             this.flowLayoutPanel2.TabIndex = 1;
-            // 
-            // button3
-            // 
-            this.button3.AutoSize = true;
-            this.button3.Location = new System.Drawing.Point(3, 27);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(190, 50);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "135kHz";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(3, 83);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(190, 50);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "1.9MHz(160m)";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(3, 163);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(190, 50);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "3.5Mhz(80m)";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(3, 219);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(190, 50);
-            this.button8.TabIndex = 0;
-            this.button8.Text = "7MHz(40m)";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(3, 331);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(190, 50);
-            this.button9.TabIndex = 3;
-            this.button9.Text = "14MHz(20m)";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(3, 387);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(190, 50);
-            this.button10.TabIndex = 4;
-            this.button10.Text = "18MHz(17m)";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.Controls.Add(this.label3);
-            this.flowLayoutPanel4.Controls.Add(this.button11);
-            this.flowLayoutPanel4.Controls.Add(this.button12);
-            this.flowLayoutPanel4.Controls.Add(this.button13);
-            this.flowLayoutPanel4.Controls.Add(this.label4);
-            this.flowLayoutPanel4.Controls.Add(this.button5);
-            this.flowLayoutPanel4.Controls.Add(this.button4);
-            this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(199, 3);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(190, 495);
-            this.flowLayoutPanel4.TabIndex = 6;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(3, 27);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(190, 50);
-            this.button11.TabIndex = 2;
-            this.button11.Text = "21MHz(15m)";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(3, 83);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(190, 50);
-            this.button12.TabIndex = 1;
-            this.button12.Text = "24Mhz(12m)";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(3, 139);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(190, 50);
-            this.button13.TabIndex = 0;
-            this.button13.Text = "28Mhz(10m)";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(3, 136);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(190, 24);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "HF";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.Location = new System.Drawing.Point(3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(190, 24);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "HF";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -231,14 +104,149 @@
             this.label1.Text = "LF, MF";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // Button135kHz
             // 
-            this.button1.Location = new System.Drawing.Point(3, 275);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 50);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "10Mhz(30m)";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Button135kHz.AutoSize = true;
+            this.Button135kHz.Location = new System.Drawing.Point(3, 27);
+            this.Button135kHz.Name = "Button135kHz";
+            this.Button135kHz.Size = new System.Drawing.Size(190, 50);
+            this.Button135kHz.TabIndex = 2;
+            this.Button135kHz.Text = "135kHz";
+            this.Button135kHz.UseVisualStyleBackColor = true;
+            this.Button135kHz.Click += new System.EventHandler(this.Button135kHz_Click);
+            // 
+            // Button19kHz
+            // 
+            this.Button19kHz.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Button19kHz.Location = new System.Drawing.Point(3, 83);
+            this.Button19kHz.Name = "Button19kHz";
+            this.Button19kHz.Size = new System.Drawing.Size(190, 50);
+            this.Button19kHz.TabIndex = 1;
+            this.Button19kHz.Text = "1.9MHz(160m)";
+            this.Button19kHz.UseVisualStyleBackColor = true;
+            this.Button19kHz.Click += new System.EventHandler(this.Button19kHz_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.Location = new System.Drawing.Point(3, 136);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(190, 24);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "HF";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Button35MHz
+            // 
+            this.Button35MHz.Location = new System.Drawing.Point(3, 163);
+            this.Button35MHz.Name = "Button35MHz";
+            this.Button35MHz.Size = new System.Drawing.Size(190, 50);
+            this.Button35MHz.TabIndex = 1;
+            this.Button35MHz.Text = "3.5Mhz(80m)";
+            this.Button35MHz.UseVisualStyleBackColor = true;
+            this.Button35MHz.Click += new System.EventHandler(this.Button35MHz_Click);
+            // 
+            // Button7MHz
+            // 
+            this.Button7MHz.Location = new System.Drawing.Point(3, 219);
+            this.Button7MHz.Name = "Button7MHz";
+            this.Button7MHz.Size = new System.Drawing.Size(190, 50);
+            this.Button7MHz.TabIndex = 0;
+            this.Button7MHz.Text = "7MHz(40m)";
+            this.Button7MHz.UseVisualStyleBackColor = true;
+            this.Button7MHz.Click += new System.EventHandler(this.Button7MHz_Click);
+            // 
+            // Button10MHz
+            // 
+            this.Button10MHz.Location = new System.Drawing.Point(3, 275);
+            this.Button10MHz.Name = "Button10MHz";
+            this.Button10MHz.Size = new System.Drawing.Size(190, 50);
+            this.Button10MHz.TabIndex = 7;
+            this.Button10MHz.Text = "10Mhz(30m)";
+            this.Button10MHz.UseVisualStyleBackColor = true;
+            this.Button10MHz.Click += new System.EventHandler(this.Button10MHz_Click);
+            // 
+            // Button14MHz
+            // 
+            this.Button14MHz.Location = new System.Drawing.Point(3, 331);
+            this.Button14MHz.Name = "Button14MHz";
+            this.Button14MHz.Size = new System.Drawing.Size(190, 50);
+            this.Button14MHz.TabIndex = 3;
+            this.Button14MHz.Text = "14MHz(20m)";
+            this.Button14MHz.UseVisualStyleBackColor = true;
+            this.Button14MHz.Click += new System.EventHandler(this.Button14MHz_Click);
+            // 
+            // Button18MHz
+            // 
+            this.Button18MHz.Location = new System.Drawing.Point(3, 387);
+            this.Button18MHz.Name = "Button18MHz";
+            this.Button18MHz.Size = new System.Drawing.Size(190, 50);
+            this.Button18MHz.TabIndex = 4;
+            this.Button18MHz.Text = "18MHz(17m)";
+            this.Button18MHz.UseVisualStyleBackColor = true;
+            this.Button18MHz.Click += new System.EventHandler(this.Button18MHz_Click);
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.Controls.Add(this.label3);
+            this.flowLayoutPanel4.Controls.Add(this.Button21MHz);
+            this.flowLayoutPanel4.Controls.Add(this.Button24MHz);
+            this.flowLayoutPanel4.Controls.Add(this.Button28MHz);
+            this.flowLayoutPanel4.Controls.Add(this.label4);
+            this.flowLayoutPanel4.Controls.Add(this.Button144MHz);
+            this.flowLayoutPanel4.Controls.Add(this.Button50MHz);
+            this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(199, 3);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(190, 495);
+            this.flowLayoutPanel4.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(190, 24);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "HF";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Button21MHz
+            // 
+            this.Button21MHz.Location = new System.Drawing.Point(3, 27);
+            this.Button21MHz.Name = "Button21MHz";
+            this.Button21MHz.Size = new System.Drawing.Size(190, 50);
+            this.Button21MHz.TabIndex = 2;
+            this.Button21MHz.Text = "21MHz(15m)";
+            this.Button21MHz.UseVisualStyleBackColor = true;
+            this.Button21MHz.Click += new System.EventHandler(this.Button21MHz_Click);
+            // 
+            // Button24MHz
+            // 
+            this.Button24MHz.Location = new System.Drawing.Point(3, 83);
+            this.Button24MHz.Name = "Button24MHz";
+            this.Button24MHz.Size = new System.Drawing.Size(190, 50);
+            this.Button24MHz.TabIndex = 1;
+            this.Button24MHz.Text = "24Mhz(12m)";
+            this.Button24MHz.UseVisualStyleBackColor = true;
+            this.Button24MHz.Click += new System.EventHandler(this.Button24MHz_Click);
+            // 
+            // Button28MHz
+            // 
+            this.Button28MHz.Location = new System.Drawing.Point(3, 139);
+            this.Button28MHz.Name = "Button28MHz";
+            this.Button28MHz.Size = new System.Drawing.Size(190, 50);
+            this.Button28MHz.TabIndex = 0;
+            this.Button28MHz.Text = "28Mhz(10m)";
+            this.Button28MHz.UseVisualStyleBackColor = true;
+            this.Button28MHz.Click += new System.EventHandler(this.Button28MHz_Click);
             // 
             // label4
             // 
@@ -253,35 +261,37 @@
             this.label4.Text = "VHF";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button4
+            // Button144MHz
             // 
-            this.button4.Location = new System.Drawing.Point(3, 275);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(190, 50);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "50Mhz(6m)";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Button144MHz.Location = new System.Drawing.Point(3, 219);
+            this.Button144MHz.Name = "Button144MHz";
+            this.Button144MHz.Size = new System.Drawing.Size(190, 50);
+            this.Button144MHz.TabIndex = 1;
+            this.Button144MHz.Text = "144MHz(2m)";
+            this.Button144MHz.UseVisualStyleBackColor = true;
+            this.Button144MHz.Click += new System.EventHandler(this.Button144MHz_Click);
             // 
-            // button5
+            // Button50MHz
             // 
-            this.button5.Location = new System.Drawing.Point(3, 219);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(190, 50);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "144MHz(2m)";
-            this.button5.UseVisualStyleBackColor = true;
+            this.Button50MHz.Location = new System.Drawing.Point(3, 275);
+            this.Button50MHz.Name = "Button50MHz";
+            this.Button50MHz.Size = new System.Drawing.Size(190, 50);
+            this.Button50MHz.TabIndex = 2;
+            this.Button50MHz.Text = "50Mhz(6m)";
+            this.Button50MHz.UseVisualStyleBackColor = true;
+            this.Button50MHz.Click += new System.EventHandler(this.Button50MHz_Click);
             // 
             // flowLayoutPanel6
             // 
             this.flowLayoutPanel6.Controls.Add(this.label5);
-            this.flowLayoutPanel6.Controls.Add(this.button6);
-            this.flowLayoutPanel6.Controls.Add(this.button14);
-            this.flowLayoutPanel6.Controls.Add(this.button15);
-            this.flowLayoutPanel6.Controls.Add(this.button16);
-            this.flowLayoutPanel6.Controls.Add(this.button17);
-            this.flowLayoutPanel6.Controls.Add(this.button18);
-            this.flowLayoutPanel6.Controls.Add(this.button19);
-            this.flowLayoutPanel6.Controls.Add(this.button20);
+            this.flowLayoutPanel6.Controls.Add(this.Button430MHz);
+            this.flowLayoutPanel6.Controls.Add(this.Button1200MHz);
+            this.flowLayoutPanel6.Controls.Add(this.Button2400MHz);
+            this.flowLayoutPanel6.Controls.Add(this.Button5600Mhz);
+            this.flowLayoutPanel6.Controls.Add(this.Button10GHz);
+            this.flowLayoutPanel6.Controls.Add(this.Button24GHz);
+            this.flowLayoutPanel6.Controls.Add(this.Button47GHz);
+            this.flowLayoutPanel6.Controls.Add(this.Button75GHz);
             this.flowLayoutPanel6.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel6.Location = new System.Drawing.Point(395, 3);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
@@ -301,77 +311,85 @@
             this.label5.Text = "UHF";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button6
+            // Button430MHz
             // 
-            this.button6.Location = new System.Drawing.Point(3, 27);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(190, 50);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "430MHz(0.7m)";
-            this.button6.UseVisualStyleBackColor = true;
+            this.Button430MHz.Location = new System.Drawing.Point(3, 27);
+            this.Button430MHz.Name = "Button430MHz";
+            this.Button430MHz.Size = new System.Drawing.Size(190, 50);
+            this.Button430MHz.TabIndex = 2;
+            this.Button430MHz.Text = "430MHz(0.7m)";
+            this.Button430MHz.UseVisualStyleBackColor = true;
+            this.Button430MHz.Click += new System.EventHandler(this.Button430MHz_Click);
             // 
-            // button14
+            // Button1200MHz
             // 
-            this.button14.Location = new System.Drawing.Point(3, 83);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(190, 50);
-            this.button14.TabIndex = 1;
-            this.button14.Text = "1200MHz(0.25m)";
-            this.button14.UseVisualStyleBackColor = true;
+            this.Button1200MHz.Location = new System.Drawing.Point(3, 83);
+            this.Button1200MHz.Name = "Button1200MHz";
+            this.Button1200MHz.Size = new System.Drawing.Size(190, 50);
+            this.Button1200MHz.TabIndex = 1;
+            this.Button1200MHz.Text = "1200MHz(0.25m)";
+            this.Button1200MHz.UseVisualStyleBackColor = true;
+            this.Button1200MHz.Click += new System.EventHandler(this.Button1200MHz_Click);
             // 
-            // button15
+            // Button2400MHz
             // 
-            this.button15.Location = new System.Drawing.Point(3, 139);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(190, 50);
-            this.button15.TabIndex = 0;
-            this.button15.Text = "2400MHz";
-            this.button15.UseVisualStyleBackColor = true;
+            this.Button2400MHz.Location = new System.Drawing.Point(3, 139);
+            this.Button2400MHz.Name = "Button2400MHz";
+            this.Button2400MHz.Size = new System.Drawing.Size(190, 50);
+            this.Button2400MHz.TabIndex = 0;
+            this.Button2400MHz.Text = "2400MHz";
+            this.Button2400MHz.UseVisualStyleBackColor = true;
+            this.Button2400MHz.Click += new System.EventHandler(this.Button2400MHz_Click);
             // 
-            // button16
+            // Button5600Mhz
             // 
-            this.button16.Location = new System.Drawing.Point(3, 195);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(190, 50);
-            this.button16.TabIndex = 7;
-            this.button16.Text = "5600MHz";
-            this.button16.UseVisualStyleBackColor = true;
+            this.Button5600Mhz.Location = new System.Drawing.Point(3, 195);
+            this.Button5600Mhz.Name = "Button5600Mhz";
+            this.Button5600Mhz.Size = new System.Drawing.Size(190, 50);
+            this.Button5600Mhz.TabIndex = 7;
+            this.Button5600Mhz.Text = "5600MHz";
+            this.Button5600Mhz.UseVisualStyleBackColor = true;
+            this.Button5600Mhz.Click += new System.EventHandler(this.Button5600Mhz_Click);
             // 
-            // button17
+            // Button10GHz
             // 
-            this.button17.Location = new System.Drawing.Point(3, 251);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(190, 50);
-            this.button17.TabIndex = 8;
-            this.button17.Text = "10GMHz";
-            this.button17.UseVisualStyleBackColor = true;
+            this.Button10GHz.Location = new System.Drawing.Point(3, 251);
+            this.Button10GHz.Name = "Button10GHz";
+            this.Button10GHz.Size = new System.Drawing.Size(190, 50);
+            this.Button10GHz.TabIndex = 8;
+            this.Button10GHz.Text = "10GMHz";
+            this.Button10GHz.UseVisualStyleBackColor = true;
+            this.Button10GHz.Click += new System.EventHandler(this.Button10GHz_Click);
             // 
-            // button18
+            // Button24GHz
             // 
-            this.button18.Location = new System.Drawing.Point(3, 307);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(190, 50);
-            this.button18.TabIndex = 9;
-            this.button18.Text = "24GHz";
-            this.button18.UseVisualStyleBackColor = true;
+            this.Button24GHz.Location = new System.Drawing.Point(3, 307);
+            this.Button24GHz.Name = "Button24GHz";
+            this.Button24GHz.Size = new System.Drawing.Size(190, 50);
+            this.Button24GHz.TabIndex = 9;
+            this.Button24GHz.Text = "24GHz";
+            this.Button24GHz.UseVisualStyleBackColor = true;
+            this.Button24GHz.Click += new System.EventHandler(this.Button24GHz_Click);
             // 
-            // button19
+            // Button47GHz
             // 
-            this.button19.Location = new System.Drawing.Point(3, 363);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(190, 50);
-            this.button19.TabIndex = 10;
-            this.button19.Text = "47GHz";
-            this.button19.UseVisualStyleBackColor = true;
+            this.Button47GHz.Location = new System.Drawing.Point(3, 363);
+            this.Button47GHz.Name = "Button47GHz";
+            this.Button47GHz.Size = new System.Drawing.Size(190, 50);
+            this.Button47GHz.TabIndex = 10;
+            this.Button47GHz.Text = "47GHz";
+            this.Button47GHz.UseVisualStyleBackColor = true;
+            this.Button47GHz.Click += new System.EventHandler(this.Button47GHz_Click);
             // 
-            // button20
+            // Button75GHz
             // 
-            this.button20.Location = new System.Drawing.Point(3, 419);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(190, 50);
-            this.button20.TabIndex = 11;
-            this.button20.Text = "75GMHz";
-            this.button20.UseVisualStyleBackColor = true;
+            this.Button75GHz.Location = new System.Drawing.Point(3, 419);
+            this.Button75GHz.Name = "Button75GHz";
+            this.Button75GHz.Size = new System.Drawing.Size(190, 50);
+            this.Button75GHz.TabIndex = 11;
+            this.Button75GHz.Text = "75GMHz";
+            this.Button75GHz.UseVisualStyleBackColor = true;
+            this.Button75GHz.Click += new System.EventHandler(this.Button75GHz_Click);
             // 
             // SelectBandForm
             // 
@@ -396,32 +414,32 @@
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Button135kHz;
+        private System.Windows.Forms.Button Button19kHz;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button Button35MHz;
+        private System.Windows.Forms.Button Button7MHz;
+        private System.Windows.Forms.Button Button14MHz;
+        private System.Windows.Forms.Button Button18MHz;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button Button21MHz;
+        private System.Windows.Forms.Button Button24MHz;
+        private System.Windows.Forms.Button Button28MHz;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Button10MHz;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button Button50MHz;
+        private System.Windows.Forms.Button Button144MHz;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button Button430MHz;
+        private System.Windows.Forms.Button Button1200MHz;
+        private System.Windows.Forms.Button Button2400MHz;
+        private System.Windows.Forms.Button Button5600Mhz;
+        private System.Windows.Forms.Button Button10GHz;
+        private System.Windows.Forms.Button Button24GHz;
+        private System.Windows.Forms.Button Button47GHz;
+        private System.Windows.Forms.Button Button75GHz;
     }
 }

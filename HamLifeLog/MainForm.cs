@@ -253,6 +253,19 @@ namespace HamLifeLog
 
             SelectModeForm.Dispose();
         }
+
+        private void ShowBandsLabel_Click(object sender, EventArgs e)
+        {
+            // select send mode form.
+            // 子フォームを表示してモードを選ぶ。
+            SelectBandForm SelectBandForm = new SelectBandForm();
+            // display the new form.
+            SelectBandForm.ShowDialog();
+
+            _data.Band = SelectBandForm.Band;
+
+            SelectBandForm.Dispose();
+        }
     }
 }
 
