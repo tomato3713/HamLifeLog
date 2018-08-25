@@ -249,6 +249,7 @@ namespace HamLifeLog
             SelectModeForm.ShowDialog();
 
             _data.Mode = SelectModeForm.Mode;
+            if (_data.Mode == "CW") _data.HisSignalRST = _data.MySignalRST = "599";
 
             SelectModeForm.Dispose();
         }
