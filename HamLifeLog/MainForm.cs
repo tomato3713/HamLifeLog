@@ -132,6 +132,7 @@ namespace HamLifeLog
             _data.Comment = "";
             if (_data.Mode == "CW") { _data.HisSignalRST = "599"; _data.MySignalRST = "599"; }
             else { _data.HisSignalRST = "59"; _data.MySignalRST = "59"; }
+            CallTextBox.Focus();
         }
 
         private void NewCreateDataBaseToolStripMenuItem_Click(object sender, EventArgs e)
