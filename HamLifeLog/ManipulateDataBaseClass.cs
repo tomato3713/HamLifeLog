@@ -21,7 +21,19 @@ namespace HamLifeLog
         public string name;
         public string comment;
         public double band;
+        public string stationCall;
         public string operatorName;
+        public string address1;
+        public string address2;
+        public string state;
+        public string city;
+        public string country;
+        public string jccNum;
+        public string gridSquare;
+        public string cqZone;
+        public string ituZone;
+        public string club;
+        public string email;
     }
 
     class ManipulateDataBaseClass
@@ -140,6 +152,24 @@ namespace HamLifeLog
             }
         }
 
+        internal void SetStationData(string call, string name, string address1, string address2, string state,
+            string city, string country, string jccNum, string gridSquare, string cqZone, string ituZone, string club, string email )
+        {
+            loggingData.stationCall = call;
+            loggingData.operatorName = name;
+            loggingData.address1 = address1;
+            loggingData.address2 = address2;
+            loggingData.state = state;
+            loggingData.city = city;
+            loggingData.country = country;
+            loggingData.jccNum = jccNum;
+            loggingData.gridSquare = gridSquare;
+            loggingData.cqZone = cqZone;
+            loggingData.ituZone = ituZone;
+            loggingData.club = club;
+            loggingData.email = email;
+        }
+
         public void AddLog()
         {
             var connection = NewConnection();
@@ -176,12 +206,12 @@ namespace HamLifeLog
         }
 
         public void SetLoggingData(DateTime date, string call, double freq, string mode, string sendrst, string receivedrst,
-            string stationPrefix, string myQTH, string name, string comment, double band, string operatorName)
+            string stationPrefix, string myQTH, string name, string comment, double band)
         {
             loggingData.ts = date; loggingData.call = call; loggingData.freq = freq;
             loggingData.mode = mode; loggingData.sendRST = sendrst; loggingData.receivedRST = receivedrst;
             loggingData.stationPrefix = stationPrefix; loggingData.qth = myQTH; loggingData.name = name;
-            loggingData.comment = comment; loggingData.operatorName = operatorName;
+            loggingData.comment = comment;
         }
     }
 }

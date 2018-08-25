@@ -72,6 +72,11 @@ namespace HamLifeLog
                 reader.Close();
 
                 stationData = JsonConvert.DeserializeObject<StationData>(json);
+
+                dataBase.SetStationData(stationData.Call, StationData.Name, StationData.Address1, 
+                    stationData.Address2, StationData.State, stationData.City, stationData.Country, 
+                    stationData.JCCNum, stationData.GridSquare, stationData.CQZone, stationData.ITUZone, 
+                    stationData.Club, stationData.EmailAddress);
             }
             catch (UnauthorizedAccessException exc)
             {
@@ -120,22 +125,22 @@ namespace HamLifeLog
                     string stationPrefix = "";
                     string stationQTH = "";
                     string stationName = "";
-                    string operatorName = "";
-                    double band = 0.0;
                     dataBase.SetLoggingData(
                         _data.RawDate, _data.HisCallSign,
                         _data.Frequency, _data.Mode,
                         _data.HisSignalRST, _data.MySignalRST,
                         stationPrefix, stationQTH,
                         stationName, _data.Comment,
-                        band, operatorName
+                        _data.Band
                     );
 
                     dataBase.AddLog();
 
                     // clear logging space
                     ClearLoggingSpace();
-
+                    break;
+                case Keys.F12:
+                    ClearLoggingSpace();
                     break;
             }
         }

@@ -44,7 +44,7 @@ namespace HamLifeLog
                 Address2 = Address2TextBox.Text,
                 State = StateTextBox.Text,
                 City = CityTextBox.Text,
-                Coutry = CountryTextBox.Text,
+                Country = CountryTextBox.Text,
                 JCCNum = JCCNumTextBox.Text,
                 GridSquare = GridSquareTextBox.Text,
                 CQZone = CQZoneTextBox.Text,
@@ -106,7 +106,7 @@ namespace HamLifeLog
                     Address2TextBox.Text = stationData.Address2;
                     StateTextBox.Text = stationData.State;
                     CityTextBox.Text = stationData.City;
-                    CountryTextBox.Text = stationData.Coutry;
+                    CountryTextBox.Text = stationData.Country;
                     JCCNumTextBox.Text = stationData.JCCNum;
                     GridSquareTextBox.Text = stationData.GridSquare;
                     CQZoneTextBox.Text = stationData.CQZone;
@@ -137,7 +137,7 @@ namespace HamLifeLog
         public string Address2 { get; set; }
         public string State { get; set; }
         public string City { get; set; }
-        public string Coutry { get; set; }
+        public string Country { get; set; }
         public string JCCNum { get; set; }
         public string GridSquare { get; set; }
         public string CQZone { get; set; }
