@@ -49,6 +49,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stationSettingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stationDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doubleBufferTableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logDataBindingClassBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -193,7 +194,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileFToolStripMenuItem,
-            this.stationSettingToolStripMenuItem});
+            this.stationSettingToolStripMenuItem,
+            this.helpHToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1080, 33);
@@ -251,6 +253,13 @@
             this.stationDataToolStripMenuItem.Text = "StationData";
             this.stationDataToolStripMenuItem.Click += new System.EventHandler(this.StationDataToolStripMenuItem_Click);
             // 
+            // helpHToolStripMenuItem
+            // 
+            this.helpHToolStripMenuItem.Name = "helpHToolStripMenuItem";
+            this.helpHToolStripMenuItem.Size = new System.Drawing.Size(84, 29);
+            this.helpHToolStripMenuItem.Text = "Help(&H)";
+            this.helpHToolStripMenuItem.Click += new System.EventHandler(this.HelpHToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -297,6 +306,7 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stationSettingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stationDataToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpHToolStripMenuItem;
     }
 }
 

@@ -196,6 +196,11 @@ namespace HamLifeLog
             // read sationDataFile
             LoadStationData();
         }
+
+        private void HelpHToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // open help form.
+        }
     }
 }
 
