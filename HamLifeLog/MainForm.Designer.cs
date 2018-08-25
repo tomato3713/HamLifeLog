@@ -49,8 +49,8 @@
             this.LogSpaceTitleLabel = new System.Windows.Forms.Label();
             this.CallTextBox = new System.Windows.Forms.TextBox();
             this.HisSignalRSTTextBox = new System.Windows.Forms.TextBox();
-            this.ShowModeTextBox = new System.Windows.Forms.TextBox();
             this.ShowBandsLabel = new System.Windows.Forms.Label();
+            this.ShowModeLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.doubleBufferTableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logDataBindingClassBindingSource)).BeginInit();
@@ -166,8 +166,8 @@
             this.doubleBufferTableLayoutPanel1.Controls.Add(this.LogSpaceTitleLabel, 0, 0);
             this.doubleBufferTableLayoutPanel1.Controls.Add(this.CallTextBox, 0, 1);
             this.doubleBufferTableLayoutPanel1.Controls.Add(this.HisSignalRSTTextBox, 2, 1);
-            this.doubleBufferTableLayoutPanel1.Controls.Add(this.ShowModeTextBox, 1, 1);
             this.doubleBufferTableLayoutPanel1.Controls.Add(this.ShowBandsLabel, 1, 0);
+            this.doubleBufferTableLayoutPanel1.Controls.Add(this.ShowModeLabel, 1, 1);
             this.doubleBufferTableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.doubleBufferTableLayoutPanel1.Location = new System.Drawing.Point(0, 441);
             this.doubleBufferTableLayoutPanel1.Name = "doubleBufferTableLayoutPanel1";
@@ -246,19 +246,6 @@
             this.HisSignalRSTTextBox.TabIndex = 4;
             this.HisSignalRSTTextBox.Text = "HisSignalRST";
             // 
-            // ShowModeTextBox
-            // 
-            this.ShowModeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.ShowModeTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.ShowModeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.logDataBindingClassBindingSource, "Mode", true));
-            this.ShowModeTextBox.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.ShowModeTextBox.Location = new System.Drawing.Point(246, 94);
-            this.ShowModeTextBox.Name = "ShowModeTextBox";
-            this.ShowModeTextBox.Size = new System.Drawing.Size(182, 25);
-            this.ShowModeTextBox.TabIndex = 6;
-            this.ShowModeTextBox.Text = "MODE";
-            this.ShowModeTextBox.Click += new System.EventHandler(this.ShowModeTextBox_Click);
-            // 
             // ShowBandsLabel
             // 
             this.ShowBandsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -269,6 +256,19 @@
             this.ShowBandsLabel.Size = new System.Drawing.Size(182, 18);
             this.ShowBandsLabel.TabIndex = 7;
             this.ShowBandsLabel.Text = "Bands\r\n";
+            // 
+            // ShowModeLabel
+            // 
+            this.ShowModeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ShowModeLabel.AutoSize = true;
+            this.ShowModeLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.logDataBindingClassBindingSource, "Mode", true));
+            this.ShowModeLabel.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.ShowModeLabel.Location = new System.Drawing.Point(246, 95);
+            this.ShowModeLabel.Name = "ShowModeLabel";
+            this.ShowModeLabel.Size = new System.Drawing.Size(182, 24);
+            this.ShowModeLabel.TabIndex = 8;
+            this.ShowModeLabel.Text = "Mode";
+            this.ShowModeLabel.Click += new System.EventHandler(this.ShowModeLabel_Click);
             // 
             // MainForm
             // 
@@ -302,7 +302,6 @@
         private System.Windows.Forms.TextBox CallTextBox;
         private System.Windows.Forms.TextBox MySignalRSTTextBox;
         private System.Windows.Forms.TextBox HisSignalRSTTextBox;
-        private System.Windows.Forms.TextBox ShowModeTextBox;
         private System.Windows.Forms.Label ShowBandsLabel;
         private System.Windows.Forms.BindingSource logDataBindingClassBindingSource;
         protected System.Windows.Forms.TextBox CommentTextBox;
@@ -318,6 +317,7 @@
         private System.Windows.Forms.ToolStripMenuItem stationDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpHToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cWToolStripMenuItem;
+        private System.Windows.Forms.Label ShowModeLabel;
     }
 }
 

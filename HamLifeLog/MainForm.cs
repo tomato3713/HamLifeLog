@@ -186,7 +186,7 @@ namespace HamLifeLog
             if (MySignalRSTTextBox.Text != _data.MySignalRST) _data.MySignalRST = MySignalRSTTextBox.Text;
             if (HisSignalRSTTextBox.Text != _data.HisSignalRST) _data.HisSignalRST = HisSignalRSTTextBox.Text;
             if (CommentTextBox.Text != _data.Comment) _data.Comment = CommentTextBox.Text;
-            if (ShowModeTextBox.Text != _data.Mode) _data.Mode = ShowModeTextBox.Text;
+            if (ShowModeLabel.Text != _data.Mode) _data.Mode = ShowModeLabel.Text;
             if (DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss") != _data.Date) _data.RawDate = DateTime.UtcNow;
         }
 
@@ -240,17 +240,17 @@ namespace HamLifeLog
         {
         }
 
-        private void ShowModeTextBox_Click(object sender, EventArgs e)
+        private void ShowModeLabel_Click(object sender, EventArgs e)
         {
-
             // select send mode form.
             // 子フォームを表示してモードを選ぶ。
-            Form SelectModeForm = new SelectModeForm();
+            SelectModeForm SelectModeForm = new SelectModeForm(_data.Mode);
             // display the new form.
-            SelectModeForm.ShowDialog(this);
-            //_data.Mode = SelectModeForm.Mode;
-            // reload station data file
-            LoadStationData();
+            SelectModeForm.ShowDialog();
+
+            _data.Mode = SelectModeForm.Mode;
+
+            SelectModeForm.Dispose();
         }
     }
 }
