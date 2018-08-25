@@ -247,7 +247,7 @@
             // stationDataToolStripMenuItem
             // 
             this.stationDataToolStripMenuItem.Name = "stationDataToolStripMenuItem";
-            this.stationDataToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.stationDataToolStripMenuItem.Size = new System.Drawing.Size(189, 30);
             this.stationDataToolStripMenuItem.Text = "StationData";
             this.stationDataToolStripMenuItem.Click += new System.EventHandler(this.StationDataToolStripMenuItem_Click);
             // 

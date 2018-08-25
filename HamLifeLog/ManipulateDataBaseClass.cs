@@ -30,7 +30,7 @@ namespace HamLifeLog
 
         private LogElementStruct loggingData;
 
-        private string FileName
+        public string FileName
         {
             get { return _fname; }
             set { _fname = value; }
@@ -74,8 +74,9 @@ namespace HamLifeLog
             connection.Close();
         }
 
-        public void NewCreateTable()
+        public void NewCreateTable(string fname)
         {
+            _fname = fname;
             if (!NewCreate()) {
                 // if database file exists, ask if proceed this process.
                 string msg = _fname + " is existed. Do you want to use this database?";

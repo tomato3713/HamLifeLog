@@ -124,7 +124,15 @@ namespace HamLifeLog
 
         private void NewCreateDataBaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            dataBase.NewCreateTable();
+            string fname = dataBase.FileName;
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            DialogResult result = fileDialog.ShowDialog();
+            if(result == System.Windows.Forms.DialogResult.OK)
+            {
+                fname = fileDialog.FileName;
+            }
+            
+            dataBase.NewCreateTable(fname);
         }
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
