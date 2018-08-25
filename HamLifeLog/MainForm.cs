@@ -163,7 +163,7 @@ namespace HamLifeLog
             };
 
             // ダイアログを表示し、戻り値が [OK] の場合は、選択したファイルを表示する
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
             {
                 fname = saveFileDialog.FileName;
             }
@@ -201,7 +201,7 @@ namespace HamLifeLog
             // 子フォームを表示してステーションデータを入力させる。
             Form EnterStationDataForm = new EnterStationDataForm(stationDataFilePath);
             // display the new form.
-            EnterStationDataForm.ShowDialog();
+            EnterStationDataForm.ShowDialog(this);
             // reload station data file
             LoadStationData();
         }
@@ -225,7 +225,7 @@ namespace HamLifeLog
             };
 
             // ダイアログを表示し、戻り値が [OK] の場合は、選択したファイルを表示する
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
             {
                 fname = openFileDialog.FileName;
             }
@@ -234,6 +234,17 @@ namespace HamLifeLog
             openFileDialog.Dispose();
 
             dataBase.FileName = fname;
+        }
+
+        private void ShowModeTextBox_TextChanged(object sender, EventArgs e)
+        {
+            // select send mode form.
+            // 子フォームを表示してステーションデータを入力させる。
+            Form SelectModeForm = new SelectModeForm();
+            // display the new form.
+            SelectModeForm.ShowDialog(this);
+            // reload station data file
+            LoadStationData();
         }
     }
 }

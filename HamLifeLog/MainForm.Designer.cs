@@ -162,6 +162,7 @@
             this.ShowModeTextBox.Size = new System.Drawing.Size(182, 25);
             this.ShowModeTextBox.TabIndex = 6;
             this.ShowModeTextBox.Text = "MODE";
+            this.ShowModeTextBox.TextChanged += new System.EventHandler(this.ShowModeTextBox_TextChanged);
             // 
             // ShowBandsLabel
             // 

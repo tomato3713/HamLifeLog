@@ -110,6 +110,12 @@
     <Compile Include="ManipulateDataBaseClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectModeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectModeForm.Designer.cs">
+      <DependentUpon>SelectModeForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DoubleBufferTableLayoutPanel.resx">
       <DependentUpon>DoubleBufferTableLayoutPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +135,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SelectModeForm.resx">
+      <DependentUpon>SelectModeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\LogDataBindingClass.datasource" />
     <None Include="Properties\Settings.settings">
