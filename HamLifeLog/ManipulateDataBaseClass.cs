@@ -23,12 +23,29 @@ namespace HamLifeLog
         public double band;
         public string operatorName;
     }
+
     class ManipulateDataBaseClass
     {
-        private string _fname = "default.sqlite";
+        private readonly string _assembly; 
+        private readonly System.IO.FileInfo _fileInfo;
+        private readonly string _startup_path;
+        private string _fname;
         private string _sql_version = "Version=3";
 
         private LogElementStruct loggingData;
+
+        public ManipulateDataBaseClass()
+        {
+            _assembly = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            _fileInfo = new System.IO.FileInfo(_assembly);
+            _startup_path = System.IO.Path.Combine(_fileInfo.Directory.FullName, "DataBase");
+            _fname = "default.sqlite";
+            if(!System.IO.Directory.Exists(_startup_path))
+            {
+                // make DataBase directory
+                System.IO.Directory.CreateDirectory(_startup_path);
+            }
+        }
 
         public string FileName
         {
@@ -42,15 +59,19 @@ namespace HamLifeLog
             set { _sql_version = value; }
         }
 
+        public string File_path => System.IO.Path.Combine(_startup_path, FileName);
+
+        public string Startup_path { get => _startup_path; }
+
         private Boolean NewCreate()
         {
             // try to create an sqlite file if it doesn't exists.
-            if (System.IO.File.Exists(FileName))
+            if (System.IO.File.Exists(File_path))
             {
                 return false;
             }
-            SQLiteConnection.CreateFile(FileName);
-            Console.WriteLine(FileName + "is exist.");
+            SQLiteConnection.CreateFile(File_path);
+            Console.WriteLine(File_path + "is exist.");
             return true;
         }
 
@@ -58,7 +79,7 @@ namespace HamLifeLog
         {
             try
             {
-                var connection = new SQLiteConnection("Data Source=" + FileName + ";" + SQLVersion);
+                var connection = new SQLiteConnection("Data Source=" + File_path + ";" + SQLVersion);
                 connection.Open();
                 return connection;
             }
@@ -77,13 +98,14 @@ namespace HamLifeLog
         public void NewCreateTable(string fname)
         {
             _fname = fname;
-            if (!NewCreate()) {
+            if (!NewCreate())
+            {
                 // if database file exists, ask if proceed this process.
                 string msg = _fname + " is existed. Do you want to use this database?";
                 string caption = "Delete";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                 DialogResult result = MessageBox.Show(msg, caption, buttons, MessageBoxIcon.Question);
-                if( result == DialogResult.No) { return; }
+                if (result == DialogResult.No) { return; }
 
             }
             var connection = NewConnection();
@@ -137,7 +159,7 @@ namespace HamLifeLog
             var command = connection.CreateCommand();
             try
             {
-                command.CommandText = @"INSERT INTO DXLOG ( TS, Call, Freq, Mode, SNT, RCV, StationPrefix, QTH, Name, Comment, Band, Operator, IsOriginal) VALUES ( @TS, @Call, @Freq, @Mode, @SNT, @RCV, @StationPrefix, @QTH, @Name, @Comment, @Band, @Operator, @IsOriginal)"; 
+                command.CommandText = @"INSERT INTO DXLOG ( TS, Call, Freq, Mode, SNT, RCV, StationPrefix, QTH, Name, Comment, Band, Operator, IsOriginal) VALUES ( @TS, @Call, @Freq, @Mode, @SNT, @RCV, @StationPrefix, @QTH, @Name, @Comment, @Band, @Operator, @IsOriginal)";
                 command.Parameters.Add(new SQLiteParameter("@IsOriginal", true));
                 command.Parameters.Add(new SQLiteParameter("@TS", loggingData.ts));
                 command.Parameters.Add(new SQLiteParameter("@Call", loggingData.call));

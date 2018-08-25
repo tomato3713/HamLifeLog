@@ -21,11 +21,11 @@ namespace HamLifeLog
         public MainForm()
         {
             InitializeComponent();
-            dataBase = new ManipulateDataBaseClass();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            dataBase = new ManipulateDataBaseClass();
             // load station data
             if (File.Exists(stationDataFile)) LoadStationData();
             else
@@ -116,22 +116,46 @@ namespace HamLifeLog
                         stationName, _data.Comment,
                         band, operatorName
                     );
-
+                    
                     dataBase.AddLog();
+
+                    // clear logging space
+                    ClearLoggingSpace();
+
                     break;
             }
+        }
+
+        private void ClearLoggingSpace()
+        {
+            _data.HisCallSign = "";
+            _data.Comment = "";
+            if (_data.Mode == "CW") { _data.HisSignalRST = "599"; _data.MySignalRST = "599"; }
+            else { _data.HisSignalRST = "59"; _data.MySignalRST = "59"; }
         }
 
         private void NewCreateDataBaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string fname = dataBase.FileName;
-            OpenFileDialog fileDialog = new OpenFileDialog();
-            DialogResult result = fileDialog.ShowDialog();
-            if(result == System.Windows.Forms.DialogResult.OK)
+            SaveFileDialog saveFileDialog = new SaveFileDialog
             {
-                fname = fileDialog.FileName;
+                InitialDirectory = dataBase.Startup_path,
+                FileName = fname,
+                Filter = "SQL database ファイル|*.sqlite;*.s3db|すべてのファイル|*.*",
+                ShowHelp = true,
+                // CreatePrompt = true,
+                OverwritePrompt = true,
+            };
+
+            // ダイアログを表示し、戻り値が [OK] の場合は、選択したファイルを表示する
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                fname = saveFileDialog.FileName;
             }
-            
+
+            // 不要になった時点で破棄する (正しくは オブジェクトの破棄を保証する を参照)
+            saveFileDialog.Dispose();
+
             dataBase.NewCreateTable(fname);
         }
 
