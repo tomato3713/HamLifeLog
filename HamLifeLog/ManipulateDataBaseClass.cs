@@ -28,12 +28,13 @@ namespace HamLifeLog
     {
         private readonly string _startup_path;
         private string _fname;
-        private string _sql_version = "Version=3";
+        private readonly string _sql_version;
 
         private LogElementStruct loggingData;
 
         public ManipulateDataBaseClass(string assemblyPath)
-        {
+        { 
+            _sql_version = "Version=3";
             _startup_path = System.IO.Path.Combine(assemblyPath, "DataBase");
             _fname = "default.sqlite";
             if(!System.IO.Directory.Exists(_startup_path))
@@ -52,7 +53,6 @@ namespace HamLifeLog
         private string SQLVersion
         {
             get { return _sql_version; }
-            set { _sql_version = value; }
         }
 
         public string File_path => System.IO.Path.Combine(_startup_path, FileName);

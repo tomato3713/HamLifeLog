@@ -24,11 +24,15 @@ namespace HamLifeLog
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            Button1_Click(sender, e);
+            SaveStationData();
             Close();
         }
 
         private void Button1_Click(object sender, EventArgs e)
+        {
+            SaveStationData();
+        }
+        private void SaveStationData()
         {
             // Save Station Data to StationData.json
             StationData stationData = new StationData
@@ -61,16 +65,16 @@ namespace HamLifeLog
                 writer.WriteLine(json);
                 writer.Close();
             }
-            catch(UnauthorizedAccessException exc)
-            {
-                System.Windows.Forms.MessageBox.Show("Fault to write staton data to " + stationDataFilePath  + "\n" +
-                    "Error : " + exc.Message + "\n"+
-                    "Not have needed authorization.");
-            }
-            catch(IOException exc)
+            catch (UnauthorizedAccessException exc)
             {
                 System.Windows.Forms.MessageBox.Show("Fault to write staton data to " + stationDataFilePath + "\n" +
-                    "Error : " + exc.Message + "\n"+
+                    "Error : " + exc.Message + "\n" +
+                    "Not have needed authorization.");
+            }
+            catch (IOException exc)
+            {
+                System.Windows.Forms.MessageBox.Show("Fault to write staton data to " + stationDataFilePath + "\n" +
+                    "Error : " + exc.Message + "\n" +
                     "May File is locked.");
             }
             finally
