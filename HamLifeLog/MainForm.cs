@@ -12,26 +12,38 @@ namespace HamLifeLog
         private LogDataBindingClass _data;
         private ManipulateDataBaseClass dataBase;
         private Timer timer;
-        private string stationDataFile = "stationData.json";
+        private readonly string settingDataFilePath;
         private StationData stationData;
+        private readonly string _assemblyDirectoryPath;
+        private readonly string stationDataFileName;
 
-        public string StationDataFile { get => stationDataFile; set => stationDataFile = value; }
         public StationData StationData { get => stationData; set => stationData = value; }
 
         public MainForm()
         {
             InitializeComponent();
+            string _assembly = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            System.IO.FileInfo _fileInfo = new System.IO.FileInfo(_assembly);
+            _assemblyDirectoryPath = _fileInfo.Directory.FullName;
+
+            settingDataFilePath = System.IO.Path.Combine(_assemblyDirectoryPath, "setting");
+
+            if (!System.IO.Directory.Exists(settingDataFilePath))
+            {
+                System.IO.Directory.CreateDirectory(settingDataFilePath);
+            }
+
+            // set setting file name
+            stationDataFileName = "stationData.json";
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            dataBase = new ManipulateDataBaseClass();
+
+            dataBase = new ManipulateDataBaseClass(_assemblyDirectoryPath);
+
             // load station data
-            if (File.Exists(stationDataFile)) LoadStationData();
-            else
-            {
-                StationDataToolStripMenuItem_Click(sender, e);
-            }
+            StationDataToolStripMenuItem_Click(sender, e);
 
             this._data = new LogDataBindingClass();
 
@@ -50,6 +62,7 @@ namespace HamLifeLog
 
         private void LoadStationData()
         {
+            string stationDataFile = System.IO.Path.Combine(settingDataFilePath, stationDataFileName);
             try
             {
                 Encoding utf8Enc = Encoding.GetEncoding("UTF-8");
@@ -116,7 +129,7 @@ namespace HamLifeLog
                         stationName, _data.Comment,
                         band, operatorName
                     );
-                    
+
                     dataBase.AddLog();
 
                     // clear logging space
@@ -183,13 +196,14 @@ namespace HamLifeLog
 
         private void StationDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            string stationDataFilePath = System.IO.Path.Combine(settingDataFilePath, stationDataFileName);
             do
             {
                 // 子フォームを表示してステーションデータを入力させる。
-                Form EnterStationDataForm = new EnterStationDataForm(stationDataFile);
+                Form EnterStationDataForm = new EnterStationDataForm(stationDataFilePath);
                 // display the new form.
                 EnterStationDataForm.ShowDialog();
-
+                // reload station data file
                 LoadStationData();
             } while (stationData.Call == "");
 

@@ -14,12 +14,12 @@ namespace HamLifeLog
 {
     public partial class EnterStationDataForm : Form
     {
-        private string stationDataFile;
+        private string stationDataFilePath;
 
-        public EnterStationDataForm(string fname)
+        public EnterStationDataForm(string fnamePath)
         {
             InitializeComponent();
-            stationDataFile = fname;
+            stationDataFilePath = fnamePath;
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -57,39 +57,39 @@ namespace HamLifeLog
             Encoding utf8Enc = Encoding.GetEncoding("UTF-8");
             try
             {
-                StreamWriter writer = new StreamWriter(stationDataFile, false, utf8Enc);
+                StreamWriter writer = new StreamWriter(stationDataFilePath, false, utf8Enc);
                 writer.WriteLine(json);
                 writer.Close();
             }
             catch(UnauthorizedAccessException exc)
             {
-                System.Windows.Forms.MessageBox.Show("Fault to write staton data to " + stationDataFile  + "\n" +
+                System.Windows.Forms.MessageBox.Show("Fault to write staton data to " + stationDataFilePath  + "\n" +
                     "Error : " + exc.Message + "\n"+
                     "Not have needed authorization.");
             }
             catch(IOException exc)
             {
-                System.Windows.Forms.MessageBox.Show("Fault to write staton data to " + stationDataFile + "\n" +
+                System.Windows.Forms.MessageBox.Show("Fault to write staton data to " + stationDataFilePath + "\n" +
                     "Error : " + exc.Message + "\n"+
                     "May File is locked.");
             }
             finally
             {
-                System.Windows.Forms.MessageBox.Show("Written Station data to " + stationDataFile);
+                System.Windows.Forms.MessageBox.Show("Written Station data to " + stationDataFilePath);
             }
         }
 
         private void EnterStationDataForm_Load(object sender, EventArgs e)
         {
             // load stationData.json
-            if (File.Exists(stationDataFile))
+            if (File.Exists(stationDataFilePath))
             {
                 // read stationdataFile
                 try
                 {
                     Encoding utf8Enc = Encoding.GetEncoding("UTF-8");
                     StreamReader reader = new StreamReader(
-                        stationDataFile, utf8Enc);
+                        stationDataFilePath, utf8Enc);
                     string json = reader.ReadToEnd();
                     reader.Close();
 
@@ -111,13 +111,13 @@ namespace HamLifeLog
                 }
                 catch (UnauthorizedAccessException exc)
                 {
-                    System.Windows.Forms.MessageBox.Show("Fault to read staton data to " + stationDataFile + "\n" +
+                    System.Windows.Forms.MessageBox.Show("Fault to read staton data to " + stationDataFilePath + "\n" +
                         "Error : " + exc.Message + "\n" +
                         "Not have needed authorization.");
                 }
                 catch (IOException exc)
                 {
-                    System.Windows.Forms.MessageBox.Show("Fault to read staton data to " + stationDataFile + "\n" +
+                    System.Windows.Forms.MessageBox.Show("Fault to read staton data to " + stationDataFilePath + "\n" +
                         "Error : " + exc.Message + "\n" +
                         "May File is locked.");
                 }

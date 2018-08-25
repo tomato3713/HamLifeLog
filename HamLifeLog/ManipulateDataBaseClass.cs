@@ -26,19 +26,15 @@ namespace HamLifeLog
 
     class ManipulateDataBaseClass
     {
-        private readonly string _assembly; 
-        private readonly System.IO.FileInfo _fileInfo;
         private readonly string _startup_path;
         private string _fname;
         private string _sql_version = "Version=3";
 
         private LogElementStruct loggingData;
 
-        public ManipulateDataBaseClass()
+        public ManipulateDataBaseClass(string assemblyPath)
         {
-            _assembly = System.Reflection.Assembly.GetExecutingAssembly().Location;
-            _fileInfo = new System.IO.FileInfo(_assembly);
-            _startup_path = System.IO.Path.Combine(_fileInfo.Directory.FullName, "DataBase");
+            _startup_path = System.IO.Path.Combine(assemblyPath, "DataBase");
             _fname = "default.sqlite";
             if(!System.IO.Directory.Exists(_startup_path))
             {
@@ -71,7 +67,6 @@ namespace HamLifeLog
                 return false;
             }
             SQLiteConnection.CreateFile(File_path);
-            Console.WriteLine(File_path + "is exist.");
             return true;
         }
 
@@ -98,16 +93,8 @@ namespace HamLifeLog
         public void NewCreateTable(string fname)
         {
             _fname = fname;
-            if (!NewCreate())
-            {
-                // if database file exists, ask if proceed this process.
-                string msg = _fname + " is existed. Do you want to use this database?";
-                string caption = "Delete";
-                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult result = MessageBox.Show(msg, caption, buttons, MessageBoxIcon.Question);
-                if (result == DialogResult.No) { return; }
-
-            }
+            NewCreate();
+            
             var connection = NewConnection();
             try
             {
