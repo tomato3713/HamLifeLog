@@ -258,7 +258,7 @@ namespace HamLifeLog
         {
             // select send mode form.
             // 子フォームを表示してモードを選ぶ。
-            SelectBandForm SelectBandForm = new SelectBandForm();
+            SelectBandForm SelectBandForm = new SelectBandForm(_data.Band);
             // display the new form.
             SelectBandForm.ShowDialog();
 

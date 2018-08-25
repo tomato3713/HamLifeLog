@@ -251,9 +251,10 @@
             this.ShowBandsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ShowBandsLabel.AutoSize = true;
             this.ShowBandsLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.logDataBindingClassBindingSource, "Band", true));
-            this.ShowBandsLabel.Location = new System.Drawing.Point(246, 27);
+            this.ShowBandsLabel.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.ShowBandsLabel.Location = new System.Drawing.Point(246, 18);
             this.ShowBandsLabel.Name = "ShowBandsLabel";
-            this.ShowBandsLabel.Size = new System.Drawing.Size(182, 18);
+            this.ShowBandsLabel.Size = new System.Drawing.Size(182, 36);
             this.ShowBandsLabel.TabIndex = 7;
             this.ShowBandsLabel.Text = "Bands\r\n";
             this.ShowBandsLabel.Click += new System.EventHandler(this.ShowBandsLabel_Click);

@@ -14,9 +14,9 @@ namespace HamLifeLog
     {
         private double _band;
 
-        public SelectBandForm()
-
+        public SelectBandForm(double band)
         {
+            _band = band;
             InitializeComponent();
         }
 
