@@ -50,6 +50,7 @@
             this.stationSettingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stationDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doubleBufferTableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logDataBindingClassBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -225,6 +226,7 @@
             this.openDatabaseToolStripMenuItem.Name = "openDatabaseToolStripMenuItem";
             this.openDatabaseToolStripMenuItem.Size = new System.Drawing.Size(265, 30);
             this.openDatabaseToolStripMenuItem.Text = "Open Database";
+            this.openDatabaseToolStripMenuItem.Click += new System.EventHandler(this.OpenDatabaseToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -241,7 +243,8 @@
             // stationSettingToolStripMenuItem
             // 
             this.stationSettingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.stationDataToolStripMenuItem});
+            this.stationDataToolStripMenuItem,
+            this.cWToolStripMenuItem});
             this.stationSettingToolStripMenuItem.Name = "stationSettingToolStripMenuItem";
             this.stationSettingToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
             this.stationSettingToolStripMenuItem.Text = "Setting";
@@ -249,7 +252,7 @@
             // stationDataToolStripMenuItem
             // 
             this.stationDataToolStripMenuItem.Name = "stationDataToolStripMenuItem";
-            this.stationDataToolStripMenuItem.Size = new System.Drawing.Size(189, 30);
+            this.stationDataToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.stationDataToolStripMenuItem.Text = "StationData";
             this.stationDataToolStripMenuItem.Click += new System.EventHandler(this.StationDataToolStripMenuItem_Click);
             // 
@@ -259,6 +262,12 @@
             this.helpHToolStripMenuItem.Size = new System.Drawing.Size(84, 29);
             this.helpHToolStripMenuItem.Text = "Help(&H)";
             this.helpHToolStripMenuItem.Click += new System.EventHandler(this.HelpHToolStripMenuItem_Click);
+            // 
+            // cWToolStripMenuItem
+            // 
+            this.cWToolStripMenuItem.Name = "cWToolStripMenuItem";
+            this.cWToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.cWToolStripMenuItem.Text = "CW(未実装)";
             // 
             // MainForm
             // 
@@ -307,6 +316,7 @@
         private System.Windows.Forms.ToolStripMenuItem stationSettingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stationDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpHToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cWToolStripMenuItem;
     }
 }
 

@@ -211,6 +211,30 @@ namespace HamLifeLog
             // open help form.
             System.Windows.Forms.MessageBox.Show("未実装です");
         }
+
+        private void OpenDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // select data base file.
+            string fname = dataBase.FileName;
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                InitialDirectory = dataBase.Startup_path,
+                FileName = fname,
+                Filter = "SQL database ファイル|*.sqlite;*.s3db|すべてのファイル|*.*",
+                ShowHelp = true,
+            };
+
+            // ダイアログを表示し、戻り値が [OK] の場合は、選択したファイルを表示する
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                fname = openFileDialog.FileName;
+            }
+
+            // 不要になった時点で破棄する (正しくは オブジェクトの破棄を保証する を参照)
+            openFileDialog.Dispose();
+
+            dataBase.FileName = fname;
+        }
     }
 }
 
