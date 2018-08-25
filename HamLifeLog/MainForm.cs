@@ -238,11 +238,17 @@ namespace HamLifeLog
 
         private void ShowModeTextBox_TextChanged(object sender, EventArgs e)
         {
+        }
+
+        private void ShowModeTextBox_Click(object sender, EventArgs e)
+        {
+
             // select send mode form.
-            // 子フォームを表示してステーションデータを入力させる。
+            // 子フォームを表示してモードを選ぶ。
             Form SelectModeForm = new SelectModeForm();
             // display the new form.
             SelectModeForm.ShowDialog(this);
+            //_data.Mode = SelectModeForm.Mode;
             // reload station data file
             LoadStationData();
         }

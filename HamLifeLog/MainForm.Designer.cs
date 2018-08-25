@@ -29,16 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.doubleBufferTableLayoutPanel1 = new HamLifeLog.DoubleBufferTableLayoutPanel();
-            this.MySignalRSTTextBox = new System.Windows.Forms.TextBox();
-            this.logDataBindingClassBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.CommentTextBox = new System.Windows.Forms.TextBox();
-            this.ShowDateLabel = new System.Windows.Forms.Label();
-            this.LogSpaceTitleLabel = new System.Windows.Forms.Label();
-            this.CallTextBox = new System.Windows.Forms.TextBox();
-            this.HisSignalRSTTextBox = new System.Windows.Forms.TextBox();
-            this.ShowModeTextBox = new System.Windows.Forms.TextBox();
-            this.ShowBandsLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.browser = new System.Windows.Forms.WebBrowser();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -49,12 +39,117 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stationSettingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stationDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.doubleBufferTableLayoutPanel1 = new HamLifeLog.DoubleBufferTableLayoutPanel();
+            this.MySignalRSTTextBox = new System.Windows.Forms.TextBox();
+            this.logDataBindingClassBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CommentTextBox = new System.Windows.Forms.TextBox();
+            this.ShowDateLabel = new System.Windows.Forms.Label();
+            this.LogSpaceTitleLabel = new System.Windows.Forms.Label();
+            this.CallTextBox = new System.Windows.Forms.TextBox();
+            this.HisSignalRSTTextBox = new System.Windows.Forms.TextBox();
+            this.ShowModeTextBox = new System.Windows.Forms.TextBox();
+            this.ShowBandsLabel = new System.Windows.Forms.Label();
+            this.menuStrip1.SuspendLayout();
             this.doubleBufferTableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logDataBindingClassBindingSource)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
+            // browser
+            // 
+            this.browser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.browser.Location = new System.Drawing.Point(0, 33);
+            this.browser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.browser.Name = "browser";
+            this.browser.Size = new System.Drawing.Size(1080, 408);
+            this.browser.TabIndex = 1;
+            this.browser.Url = new System.Uri("https://www.google.co.jp", System.UriKind.Absolute);
+            this.browser.WebBrowserShortcutsEnabled = false;
+            this.browser.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.WebBrowser_PreviewKeyDown);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileFToolStripMenuItem,
+            this.stationSettingToolStripMenuItem,
+            this.helpHToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1080, 33);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileFToolStripMenuItem
+            // 
+            this.fileFToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createNewDatabaseToolStripMenuItem,
+            this.openDatabaseToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.exitToolStripMenuItem});
+            this.fileFToolStripMenuItem.Name = "fileFToolStripMenuItem";
+            this.fileFToolStripMenuItem.Size = new System.Drawing.Size(69, 29);
+            this.fileFToolStripMenuItem.Text = "File(&F)";
+            // 
+            // createNewDatabaseToolStripMenuItem
+            // 
+            this.createNewDatabaseToolStripMenuItem.Name = "createNewDatabaseToolStripMenuItem";
+            this.createNewDatabaseToolStripMenuItem.Size = new System.Drawing.Size(265, 30);
+            this.createNewDatabaseToolStripMenuItem.Text = "Create New Database";
+            this.createNewDatabaseToolStripMenuItem.Click += new System.EventHandler(this.NewCreateDataBaseToolStripMenuItem_Click);
+            // 
+            // openDatabaseToolStripMenuItem
+            // 
+            this.openDatabaseToolStripMenuItem.Name = "openDatabaseToolStripMenuItem";
+            this.openDatabaseToolStripMenuItem.Size = new System.Drawing.Size(265, 30);
+            this.openDatabaseToolStripMenuItem.Text = "Open Database";
+            this.openDatabaseToolStripMenuItem.Click += new System.EventHandler(this.OpenDatabaseToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(262, 6);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(265, 30);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            // 
+            // stationSettingToolStripMenuItem
+            // 
+            this.stationSettingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stationDataToolStripMenuItem,
+            this.cWToolStripMenuItem});
+            this.stationSettingToolStripMenuItem.Name = "stationSettingToolStripMenuItem";
+            this.stationSettingToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
+            this.stationSettingToolStripMenuItem.Text = "Setting";
+            // 
+            // stationDataToolStripMenuItem
+            // 
+            this.stationDataToolStripMenuItem.Name = "stationDataToolStripMenuItem";
+            this.stationDataToolStripMenuItem.Size = new System.Drawing.Size(189, 30);
+            this.stationDataToolStripMenuItem.Text = "StationData";
+            this.stationDataToolStripMenuItem.Click += new System.EventHandler(this.StationDataToolStripMenuItem_Click);
+            // 
+            // cWToolStripMenuItem
+            // 
+            this.cWToolStripMenuItem.Name = "cWToolStripMenuItem";
+            this.cWToolStripMenuItem.Size = new System.Drawing.Size(189, 30);
+            this.cWToolStripMenuItem.Text = "CW(未実装)";
+            // 
+            // helpHToolStripMenuItem
+            // 
+            this.helpHToolStripMenuItem.Name = "helpHToolStripMenuItem";
+            this.helpHToolStripMenuItem.Size = new System.Drawing.Size(84, 29);
+            this.helpHToolStripMenuItem.Text = "Help(&H)";
+            this.helpHToolStripMenuItem.Click += new System.EventHandler(this.HelpHToolStripMenuItem_Click);
             // 
             // doubleBufferTableLayoutPanel1
             // 
@@ -162,7 +257,7 @@
             this.ShowModeTextBox.Size = new System.Drawing.Size(182, 25);
             this.ShowModeTextBox.TabIndex = 6;
             this.ShowModeTextBox.Text = "MODE";
-            this.ShowModeTextBox.TextChanged += new System.EventHandler(this.ShowModeTextBox_TextChanged);
+            this.ShowModeTextBox.Click += new System.EventHandler(this.ShowModeTextBox_Click);
             // 
             // ShowBandsLabel
             // 
@@ -174,101 +269,6 @@
             this.ShowBandsLabel.Size = new System.Drawing.Size(182, 18);
             this.ShowBandsLabel.TabIndex = 7;
             this.ShowBandsLabel.Text = "Bands\r\n";
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
-            // 
-            // browser
-            // 
-            this.browser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.browser.Location = new System.Drawing.Point(0, 33);
-            this.browser.MinimumSize = new System.Drawing.Size(20, 20);
-            this.browser.Name = "browser";
-            this.browser.Size = new System.Drawing.Size(1080, 408);
-            this.browser.TabIndex = 1;
-            this.browser.Url = new System.Uri("https://www.google.co.jp", System.UriKind.Absolute);
-            this.browser.WebBrowserShortcutsEnabled = false;
-            this.browser.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.WebBrowser_PreviewKeyDown);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileFToolStripMenuItem,
-            this.stationSettingToolStripMenuItem,
-            this.helpHToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1080, 33);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileFToolStripMenuItem
-            // 
-            this.fileFToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.createNewDatabaseToolStripMenuItem,
-            this.openDatabaseToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.exitToolStripMenuItem});
-            this.fileFToolStripMenuItem.Name = "fileFToolStripMenuItem";
-            this.fileFToolStripMenuItem.Size = new System.Drawing.Size(69, 29);
-            this.fileFToolStripMenuItem.Text = "File(&F)";
-            // 
-            // createNewDatabaseToolStripMenuItem
-            // 
-            this.createNewDatabaseToolStripMenuItem.Name = "createNewDatabaseToolStripMenuItem";
-            this.createNewDatabaseToolStripMenuItem.Size = new System.Drawing.Size(265, 30);
-            this.createNewDatabaseToolStripMenuItem.Text = "Create New Database";
-            this.createNewDatabaseToolStripMenuItem.Click += new System.EventHandler(this.NewCreateDataBaseToolStripMenuItem_Click);
-            // 
-            // openDatabaseToolStripMenuItem
-            // 
-            this.openDatabaseToolStripMenuItem.Name = "openDatabaseToolStripMenuItem";
-            this.openDatabaseToolStripMenuItem.Size = new System.Drawing.Size(265, 30);
-            this.openDatabaseToolStripMenuItem.Text = "Open Database";
-            this.openDatabaseToolStripMenuItem.Click += new System.EventHandler(this.OpenDatabaseToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(262, 6);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(265, 30);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
-            // 
-            // stationSettingToolStripMenuItem
-            // 
-            this.stationSettingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.stationDataToolStripMenuItem,
-            this.cWToolStripMenuItem});
-            this.stationSettingToolStripMenuItem.Name = "stationSettingToolStripMenuItem";
-            this.stationSettingToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
-            this.stationSettingToolStripMenuItem.Text = "Setting";
-            // 
-            // stationDataToolStripMenuItem
-            // 
-            this.stationDataToolStripMenuItem.Name = "stationDataToolStripMenuItem";
-            this.stationDataToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
-            this.stationDataToolStripMenuItem.Text = "StationData";
-            this.stationDataToolStripMenuItem.Click += new System.EventHandler(this.StationDataToolStripMenuItem_Click);
-            // 
-            // helpHToolStripMenuItem
-            // 
-            this.helpHToolStripMenuItem.Name = "helpHToolStripMenuItem";
-            this.helpHToolStripMenuItem.Size = new System.Drawing.Size(84, 29);
-            this.helpHToolStripMenuItem.Text = "Help(&H)";
-            this.helpHToolStripMenuItem.Click += new System.EventHandler(this.HelpHToolStripMenuItem_Click);
-            // 
-            // cWToolStripMenuItem
-            // 
-            this.cWToolStripMenuItem.Name = "cWToolStripMenuItem";
-            this.cWToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
-            this.cWToolStripMenuItem.Text = "CW(未実装)";
             // 
             // MainForm
             // 
@@ -284,11 +284,11 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.doubleBufferTableLayoutPanel1.ResumeLayout(false);
             this.doubleBufferTableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logDataBindingClassBindingSource)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

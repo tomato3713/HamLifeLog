@@ -12,11 +12,13 @@ namespace HamLifeLog
 {
     public partial class SelectModeForm : Form
     {
-        public string ReturnValue; // return value
+        private string _mode; // return value
 
         public SelectModeForm()
         {
             InitializeComponent();
         }
+
+        public string Mode { get => _mode; set => _mode = value; }
     }
 }
