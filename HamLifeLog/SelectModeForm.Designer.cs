@@ -86,6 +86,7 @@
             this.SelectCWButton.Size = new System.Drawing.Size(325, 69);
             this.SelectCWButton.TabIndex = 3;
             this.SelectCWButton.Text = "CW";
+            this.SelectCWButton.UseMnemonic = false;
             this.SelectCWButton.UseVisualStyleBackColor = true;
             this.SelectCWButton.Click += new System.EventHandler(this.SelectCWButton_Click);
             // 
@@ -97,7 +98,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.DoubleBuffered = true;
             this.Name = "SelectModeForm";
-            this.Text = "SelectModeForm";
+            this.Text = "Select Mode";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
