@@ -271,6 +271,12 @@ namespace HamLifeLog
 
             SelectBandForm.Dispose();
         }
+
+        private void logTableWindowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LogTableWinForm logTableWindow = new LogTableWinForm(dataBase.File_path, dataBase.SQLVersion);
+            logTableWindow.Show();
+        }
     }
 }
 

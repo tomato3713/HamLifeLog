@@ -37,6 +37,8 @@
             this.openDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.windowwToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logTableWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stationSettingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stationDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,6 +79,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileFToolStripMenuItem,
+            this.windowwToolStripMenuItem,
             this.stationSettingToolStripMenuItem,
             this.helpHToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -121,6 +124,21 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(265, 30);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            // 
+            // windowwToolStripMenuItem
+            // 
+            this.windowwToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.logTableWindowToolStripMenuItem});
+            this.windowwToolStripMenuItem.Name = "windowwToolStripMenuItem";
+            this.windowwToolStripMenuItem.Size = new System.Drawing.Size(113, 29);
+            this.windowwToolStripMenuItem.Text = "Window(&w)";
+            // 
+            // logTableWindowToolStripMenuItem
+            // 
+            this.logTableWindowToolStripMenuItem.Name = "logTableWindowToolStripMenuItem";
+            this.logTableWindowToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.logTableWindowToolStripMenuItem.Text = "Log Table Window";
+            this.logTableWindowToolStripMenuItem.Click += new System.EventHandler(this.logTableWindowToolStripMenuItem_Click);
             // 
             // stationSettingToolStripMenuItem
             // 
@@ -320,6 +338,8 @@
         private System.Windows.Forms.ToolStripMenuItem helpHToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cWToolStripMenuItem;
         private System.Windows.Forms.Label ShowModeLabel;
+        private System.Windows.Forms.ToolStripMenuItem windowwToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logTableWindowToolStripMenuItem;
     }
 }
 

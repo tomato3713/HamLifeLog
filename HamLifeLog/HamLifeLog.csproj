@@ -100,6 +100,12 @@
     <Compile Include="EnterStationDataForm.Designer.cs">
       <DependentUpon>EnterStationDataForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogTableWinForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogTableWinForm.Designer.cs">
+      <DependentUpon>LogTableWinForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EnterStationDataForm.resx">
       <DependentUpon>EnterStationDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogTableWinForm.resx">
+      <DependentUpon>LogTableWinForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

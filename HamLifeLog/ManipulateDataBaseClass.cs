@@ -62,7 +62,7 @@ namespace HamLifeLog
             set { _fname = value; }
         }
 
-        private string SQLVersion
+        public string SQLVersion
         {
             get { return _sql_version; }
         }
