@@ -17,6 +17,8 @@ namespace HamLifeLog
         private readonly string _assemblyDirectoryPath;
         private readonly string stationDataFileName;
 
+        private LogTableWinForm logTableWindow;
+
         public StationData StationData { get => stationData; set => stationData = value; }
 
         public MainForm()
@@ -135,6 +137,10 @@ namespace HamLifeLog
                     );
 
                     dataBase.AddLog();
+
+                    if (logTableWindow != null && !logTableWindow.IsDisposed ) {
+                        logTableWindow.LogTableUpdate();
+                    }
 
                     // clear logging space
                     ClearLoggingSpace();
@@ -272,9 +278,9 @@ namespace HamLifeLog
             SelectBandForm.Dispose();
         }
 
-        private void logTableWindowToolStripMenuItem_Click(object sender, EventArgs e)
+        private void LogTableWindowToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LogTableWinForm logTableWindow = new LogTableWinForm(dataBase.File_path, dataBase.SQLVersion);
+            logTableWindow = new LogTableWinForm(dataBase.File_path, dataBase.SQLVersion);
             logTableWindow.Show();
         }
     }

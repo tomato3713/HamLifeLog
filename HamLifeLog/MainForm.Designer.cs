@@ -138,7 +138,7 @@
             this.logTableWindowToolStripMenuItem.Name = "logTableWindowToolStripMenuItem";
             this.logTableWindowToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.logTableWindowToolStripMenuItem.Text = "Log Table Window";
-            this.logTableWindowToolStripMenuItem.Click += new System.EventHandler(this.logTableWindowToolStripMenuItem_Click);
+            this.logTableWindowToolStripMenuItem.Click += new System.EventHandler(this.LogTableWindowToolStripMenuItem_Click);
             // 
             // stationSettingToolStripMenuItem
             // 

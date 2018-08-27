@@ -50,7 +50,6 @@
             this.Controls.Add(this.LogTableDataGridView);
             this.Name = "LogTableWinForm";
             this.Text = "LogTableWinForm";
-            this.Load += new System.EventHandler(this.LogTableWinForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LogTableDataGridView)).EndInit();
             this.ResumeLayout(false);
 
