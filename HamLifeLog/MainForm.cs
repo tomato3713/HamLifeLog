@@ -245,6 +245,10 @@ namespace HamLifeLog
             openFileDialog.Dispose();
 
             dataBase.FileName = fname;
+            if(logTableWindow != null && !logTableWindow.IsDisposed)
+            {
+                logTableWindow.LogTableUpdate();
+            }
         }
 
         private void ShowModeTextBox_TextChanged(object sender, EventArgs e)

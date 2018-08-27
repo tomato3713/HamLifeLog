@@ -26,6 +26,8 @@ namespace HamLifeLog
             }
             LogTableDataGridView.DataSource = dataTable;
             LogTableDataGridView.FirstDisplayedScrollingRowIndex = LogTableDataGridView.Rows.Count - 1;
+
+            Text = dataBaseFilePath;
         }
 
         public void LogTableUpdate()
@@ -38,6 +40,7 @@ namespace HamLifeLog
                 sda.Fill(dataTable);
             }
             LogTableDataGridView.FirstDisplayedScrollingRowIndex = LogTableDataGridView.Rows.Count - 1;
+            Text = dataBaseFilePath;
         }
     }
 }
