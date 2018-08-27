@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.LogTableDataGridView = new System.Windows.Forms.DataGridView();
+            this.logDataBindingClassBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.LogTableDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logDataBindingClassBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // LogTableDataGridView
@@ -42,6 +45,10 @@
             this.LogTableDataGridView.Size = new System.Drawing.Size(800, 450);
             this.LogTableDataGridView.TabIndex = 0;
             // 
+            // logDataBindingClassBindingSource
+            // 
+            this.logDataBindingClassBindingSource.DataSource = typeof(HamLifeLog.LogDataBindingClass);
+            // 
             // LogTableWinForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -50,7 +57,9 @@
             this.Controls.Add(this.LogTableDataGridView);
             this.Name = "LogTableWinForm";
             this.Text = "LogTableWinForm";
+            this.Load += new System.EventHandler(this.LogTableWinForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LogTableDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logDataBindingClassBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -58,5 +67,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView LogTableDataGridView;
+        private System.Windows.Forms.BindingSource logDataBindingClassBindingSource;
     }
 }

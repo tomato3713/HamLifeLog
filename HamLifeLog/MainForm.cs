@@ -124,6 +124,10 @@ namespace HamLifeLog
                     break;
                 case Keys.F9:
                     // Add now writing Log
+                    if( _data.HisCallSign == "" )
+                    {
+                        break;
+                    }
                     string stationPrefix = "";
                     string stationQTH = "";
                     string stationName = "";
@@ -183,6 +187,9 @@ namespace HamLifeLog
             saveFileDialog.Dispose();
 
             dataBase.NewCreateTable(fname);
+
+            if( logTableWindow != null && !logTableWindow.IsDisposed )
+                logTableWindow.ChangeLogDataBase(dataBase.FileName, dataBase.SQLVersion);
         }
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -247,7 +254,7 @@ namespace HamLifeLog
             dataBase.FileName = fname;
             if(logTableWindow != null && !logTableWindow.IsDisposed)
             {
-                logTableWindow.LogTableUpdate();
+                logTableWindow.ChangeLogDataBase(dataBase.FileName, dataBase.SQLVersion);
             }
         }
 

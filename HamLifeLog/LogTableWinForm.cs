@@ -9,25 +9,13 @@ namespace HamLifeLog
     {
         private string dataBaseFilePath;
         private string _sql_version;
-        private DataTable dataTable;
+        private DataTable dataTable = new DataTable();
 
         public LogTableWinForm(string filePath, string version)
         {
             InitializeComponent();
             dataBaseFilePath = filePath;
             _sql_version = version;
-            dataTable = new DataTable();
-            using (var con = new SQLiteConnection("Data Source=" + dataBaseFilePath + ";" + _sql_version))
-            {
-                var cmd = con.CreateCommand();
-                cmd.CommandText = "SELECT * FROM DXLog";
-                var sda = new SQLiteDataAdapter(cmd);
-                sda.Fill(dataTable);
-            }
-            LogTableDataGridView.DataSource = dataTable;
-            LogTableDataGridView.FirstDisplayedScrollingRowIndex = LogTableDataGridView.Rows.Count - 1;
-
-            Text = dataBaseFilePath;
         }
 
         public void LogTableUpdate()
@@ -40,7 +28,26 @@ namespace HamLifeLog
                 sda.Fill(dataTable);
             }
             LogTableDataGridView.FirstDisplayedScrollingRowIndex = LogTableDataGridView.Rows.Count - 1;
-            Text = dataBaseFilePath;
+            Text = System.IO.Path.GetFileName(dataBaseFilePath);
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            LogTableDataGridView.DataSource = dataTable;
+            base.OnLoad(e);
+        }
+
+        private void LogTableWinForm_Load(object sender, EventArgs e)
+        {
+            LogTableUpdate();
+        }
+        
+        public void ChangeLogDataBase(string filePath, string version)
+        {
+            dataTable.Clear();
+            _sql_version = version;
+            dataBaseFilePath = filePath;
+            LogTableUpdate();
         }
     }
 }

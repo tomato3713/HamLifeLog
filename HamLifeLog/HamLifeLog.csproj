@@ -157,7 +157,10 @@
       <DependentUpon>SelectModeForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\HamLifeLog.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\HamLifeLog.Properties.Settings.datasource" />
     <None Include="Properties\DataSources\LogDataBindingClass.datasource" />
+    <None Include="Properties\DataSources\ManipulateDataBaseClass.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
