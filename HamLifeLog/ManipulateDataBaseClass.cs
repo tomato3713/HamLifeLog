@@ -168,6 +168,58 @@ namespace HamLifeLog
             loggingData.ituZone = ituZone;
             loggingData.club = club;
             loggingData.email = email;
+            WriteStationData();
+        }
+
+        private void WriteStationData()
+        {
+            var connection = NewConnection();
+            var command = connection.CreateCommand();
+            try
+            {
+                command.CommandText = @"REPLACE INTO Station (
+                    Call, Name, Street1, Street2, City, State, Zip, Country, GridSquare, LicenseClass,
+                    Latitude, Logitude, PacketNode, ARRLSection, Club, 
+                    IARUZone, CQZone, STXeq, SPowe, SAnte, SAntH1, SAntH2, RoverQTH
+                    ) VALUES ( 
+                    @Call, @Name, @Street1, @Street2, @City, @State, @Zip, @Country, @GridSquare, @LicenseClass,
+                    @Latitude, @Logitude, @PacketNode, @ARRLSection, @Club, 
+                    @IARUZone, @CQZone, @STXeq, @SPowe, @SAnte, @SAntH1, @SAntH2, @RoverQTH
+                    )";
+
+                command.Parameters.Add(new SQLiteParameter("@Call", loggingData.stationCall));
+                command.Parameters.Add(new SQLiteParameter("@Name", loggingData.operatorName));
+                command.Parameters.Add(new SQLiteParameter("@Street1", loggingData.address1));
+                command.Parameters.Add(new SQLiteParameter("@Street2", loggingData.address2));
+                command.Parameters.Add(new SQLiteParameter("@City", loggingData.city));
+                command.Parameters.Add(new SQLiteParameter("@State", loggingData.state));
+                command.Parameters.Add(new SQLiteParameter("@Zip", ""));
+                command.Parameters.Add(new SQLiteParameter("@Countory", loggingData.country));
+                command.Parameters.Add(new SQLiteParameter("@GridSquare", loggingData.gridSquare));
+                command.Parameters.Add(new SQLiteParameter("@LicenseClass", null));
+                command.Parameters.Add(new SQLiteParameter("@Latitude", null));
+                command.Parameters.Add(new SQLiteParameter("@Logitude", null));
+                command.Parameters.Add(new SQLiteParameter("@PacketNode", null));
+                command.Parameters.Add(new SQLiteParameter("@ARRLSection", null));
+                command.Parameters.Add(new SQLiteParameter("@Club", loggingData.club));
+                command.Parameters.Add(new SQLiteParameter("@IARUZone", null));
+                command.Parameters.Add(new SQLiteParameter("@CQZone", loggingData.cqZone));
+                command.Parameters.Add(new SQLiteParameter("@STXeq", null));
+                command.Parameters.Add(new SQLiteParameter("@SPowe", null));
+                command.Parameters.Add(new SQLiteParameter("@SAntH1", null));
+                command.Parameters.Add(new SQLiteParameter("@SAntH2", null));
+                command.Parameters.Add(new SQLiteParameter("@RoverQTH", loggingData.qth));
+                command.ExecuteNonQuery();
+            }
+            catch (SQLiteException exc)
+            {
+                System.Diagnostics.Debug.WriteLine(exc.Message);
+                System.Windows.Forms.MessageBox.Show("Fault to add Log: ", exc.Message);
+            }
+            finally
+            {
+                CloseConnection(connection);
+            }
         }
 
         public void AddLog()
@@ -176,7 +228,10 @@ namespace HamLifeLog
             var command = connection.CreateCommand();
             try
             {
-                command.CommandText = @"INSERT INTO DXLOG ( TS, Call, Freq, Mode, SNT, RCV, StationPrefix, QTH, Name, Comment, Band, Operator, IsOriginal) VALUES ( @TS, @Call, @Freq, @Mode, @SNT, @RCV, @StationPrefix, @QTH, @Name, @Comment, @Band, @Operator, @IsOriginal)";
+                command.CommandText = @"INSERT INTO DXLOG (
+                    TS, Call, Freq, Mode, SNT, RCV, StationPrefix, QTH, Name, Comment, Band, Operator, IsOriginal
+                    ) VALUES ( 
+                    @TS, @Call, @Freq, @Mode, @SNT, @RCV, @StationPrefix, @QTH, @Name, @Comment, @Band, @Operator, @IsOriginal)";
                 command.Parameters.Add(new SQLiteParameter("@IsOriginal", true));
                 command.Parameters.Add(new SQLiteParameter("@TS", loggingData.ts));
                 command.Parameters.Add(new SQLiteParameter("@Call", loggingData.call));
